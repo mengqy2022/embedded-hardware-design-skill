@@ -1,0 +1,4 @@
+interface:
+  display_name: "PCB 设计规则"
+  short_description: "复用 PCB 布局布线规则，按项目确定参数并保留当前修订的核验证据"
+  default_prompt: "使用 $pcb-design-rules 读取当前项目约束，完成所需 PCB 布局、布线或审查并记录核验证据。"

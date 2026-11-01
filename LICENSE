@@ -1,0 +1,20 @@
+SPDX-License-Identifier: CC-BY-SA-4.0
+
+PCB Design Rules Skill documentation and original helper code are provided under
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+
+License deed: https://creativecommons.org/licenses/by-sa/4.0/
+Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Attribution: workplace_Embedded PCB standards contributors; source attribution
+and changes are recorded in references/sources.md and CHANGELOG.md. The layout
+workflow adapts and summarizes SparkFun Electronics / jimblom's "Using EAGLE:
+Board Layout", also licensed CC BY-SA 4.0. Preserve this attribution and identify
+your changes when sharing adaptations.
+
+Vendor documents and external plugins are NOT included or relicensed. Their
+authors retain their rights; links in this repository convey no endorsement.
+
+The material is provided as-is, without warranties, including fitness for a
+particular purpose. It does not replace device-specific requirements,
+manufacturing review, electrical verification, or applicable safety standards.
