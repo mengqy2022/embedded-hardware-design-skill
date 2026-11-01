@@ -1,16 +1,16 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "created": "2026-11-01",
-  "origin": "Reviewed summaries of workplace_Embedded PCB standards and existing source-reading records",
+  "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable methods and user defaults; project circuits and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "2aa828aa4fb065ebecbd10eb15bb43db68ab08d534a1698f146b8391abd01771"
+      "sha256": "7c84e6a639cb7a5113c4f7deab00ca8711e03bdb61ccc493ae413c647fac1731"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "3635ce729421eec2322b4e95f12725506211249033286cb054d1e6a44699405a"
+      "sha256": "57159a4f2bce498da87b69027d0793a875a9fb3a347589bb0690e80f8d233d1e"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "3f966aa263a72b336b6f8d4d483419d9896776ac11a3a7e9e418023986e8946c"
+      "sha256": "4c0f94f5c8362e5d2770c40dabcc3b06ad0b74b20975e9c28a88877196207d60"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -27,6 +27,15 @@
     {
       "path": "engineering/notes/LCEDA_PCB_CIRCUITS_RESEARCH_20261031.md",
       "sha256": "d385d470c7f2ae730ad1ba1fae696744a0cb8ec4d06f87e512f8bb413ac8f595"
+    },
+    {
+      "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
+      "sha256": "1c6738a2a109291a3e7e5e7a2dd1764ada0745c65e8271f063f0bae8a3608a04"
+    },
+    {
+      "path": "engineering/tools/check_pcb_rule_gate.py",
+      "sha256": "26895879a5771bf2be189ac8347b456b1f13337d70c4108f29fa61e16d0e0ef7"
     }
-  ]
+  ],
+  "updated": "2026-11-01"
 }
