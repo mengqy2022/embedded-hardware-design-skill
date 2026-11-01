@@ -1,22 +1,22 @@
 {
   "name": "pcb-design-rules",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sha256": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     ".gitignore": "d85e869880ce59f80b6ff556112ef93ea215e5966f8a1633cbaac84b28e26889",
-    "CHANGELOG.md": "1298ba69776d53e6e369dad6c973c637760940f83d5e198a94cb78e05ef48730",
+    "CHANGELOG.md": "22eb16b5a48d448978c48647004b8f21282878e892f3d6c238ecdb2674f3a3ec",
     "LICENSE": "5b3fc7598797710cfeecc9a9eb592907b62d831048f3eadd1db84ef37cdeb3ea",
     "OPTIONAL_PLUGINS.md": "7d2c1795eef56170696be70d98c45bcebec94ea007a331f0629e543da508c27c",
-    "README.md": "aa292f2934099f1a79e92af3d25b77af34a73d8b45dcb49d5889da1564d02540",
-    "SKILL.md": "ec82fba63f92d19148353651ea1aa02e0912359adfd66250f5e4833085f585df",
+    "README.md": "fcf1eb810c93905d355abceb3c0fbcaf19228e8af79ff6b232ff7ab8035a8ebd",
+    "SKILL.md": "aa865c7a8d98ebea8c38e0b2a3db916f86a59eb286f0709f8279cd374ef816d9",
     "agents/openai.yaml": "d11e83b1a2715f39452f414f21e12af724a1404b2989477284ceb17b1ae185f6",
-    "assets/PROJECT_RULES.md": "8828b2efdd145aa81f225563534a67baf3770cec095744b06d972d2dd0da0b10",
-    "provenance.json": "e48781bfd6ec2472e234822d1dbfd0167fa8cf319001f43f5e293a33bc15d464",
-    "references/differential-crystal.md": "dee8bc55452a944546de61daf359f94fdcd2414bf01ff523b1645fe55f9fef9d",
+    "assets/PROJECT_RULES.md": "789352dbbdc5a79ec45a48526e487ebd9301d8cd9b53d9cf2a39e97fbd3bec04",
+    "provenance.json": "8e6393788a57d17be9633b2898dca24ef07e9e3953c7f403d7ac11c4b940b0c5",
+    "references/differential-crystal.md": "4888d04f8c6e19bfac30d25f7d077d6c6adab00f423ea4f66c732601e33db64c",
     "references/layout-manufacturing.md": "dc50b266aeb04d5866bc5ba1b7af1b5f360b9e40c3fb1bb89a94c440d59dbb78",
-    "references/power-ground.md": "9eba2838d6e65ab8f2e85ac903f805e55620b0e71fb2b35c330ff034b3534dc7",
+    "references/power-ground.md": "a97fe55a11ba5219d49e7a1808ef00dba1abead0ef79a1d93d38ea6169df53c8",
     "references/sources.md": "e1e0d56ad343bdf93ffa5f9a4fc372485dcfb7c1ba309c95927d324e18ae74e9",
-    "references/verification.md": "f607c5683c5a8441f63f320d1d373e73acb52e2e0e20dfbcf3bd3b8e37cd0ad5",
+    "references/verification.md": "1f8b1442f79c03e6e9df33d8d0342deeca33ed19820e15d76021bc1b7979ad7f",
     "scripts/package_skill.py": "6a76c4fa01f3312e5e0c1eb9f15c9301393041a9486a6bb47e3a63ccf957ad29"
   }
 }

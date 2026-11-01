@@ -1,6 +1,6 @@
 # PCB Design Rules Skill
 
-面向常见低压嵌入式 PCB 的可携带设计规则：布局、差分/等长、晶振、电源/GND、去耦、机械、丝印及交付核验。版本 **1.1.0**。规则按需读取，项目参数单独填写；已有原理图为电气依据。
+面向常见低压嵌入式 PCB 的可携带设计规则：布局、差分/等长、晶振、电源/GND、去耦、机械、丝印及交付核验。版本 **1.1.1**。规则按需读取，项目参数单独填写；已有原理图为电气依据。
 
 ## 在另一台电脑的 Codex 中使用
 
@@ -55,7 +55,7 @@ Python 3.10+打包和完整性检查（不需要安装第三方Python包）：
 
 ```powershell
 python scripts/package_skill.py --verify
-python scripts/package_skill.py --refresh --output ../pcb-design-rules-1.1.0.zip --chatgpt-output ../PCB_RULES_CHATGPT.md
+python scripts/package_skill.py --refresh --output ../pcb-design-rules-1.1.1.zip --chatgpt-output ../PCB_RULES_CHATGPT.md
 ```
 
 `--refresh`明确更新本次发布的文件哈希；先人工审核规则，哈希一致只证明文件完整。`--verify`不写文件，可在另一台电脑复核。Git仓库和ZIP均不带厂商PDF、原生PCB、私有工程或对话日志。
