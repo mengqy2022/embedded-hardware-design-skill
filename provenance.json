@@ -1,16 +1,16 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable methods and user defaults; project circuits and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "d07fe7a1aa802311caee60fef5d2e59d2c20323f2b7aaedcd777bd13f6fdea85"
+      "sha256": "0ff0fe2133ff771686a41812785fec7fcb8e907f65b4f5993e49a11689cffaf4"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "385a73a938313f917d5564f448237da795f4bd042911812cd071b2f4cc2d0e1e"
+      "sha256": "252c8dfa36d38a94231f2455e33558ce424ed1b389d355d9560275898c85c69d"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -37,5 +37,5 @@
       "sha256": "30f42fbc341ba4ba2489d5a1f788bbf51e3462c42eec8c8548a7fecfac54b883"
     }
   ],
-  "updated": "2026-11-01"
+  "updated": "2026-11-02"
 }
