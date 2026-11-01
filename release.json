@@ -11,10 +11,10 @@
     "SKILL.md": "aa865c7a8d98ebea8c38e0b2a3db916f86a59eb286f0709f8279cd374ef816d9",
     "agents/openai.yaml": "d11e83b1a2715f39452f414f21e12af724a1404b2989477284ceb17b1ae185f6",
     "assets/PROJECT_RULES.md": "789352dbbdc5a79ec45a48526e487ebd9301d8cd9b53d9cf2a39e97fbd3bec04",
-    "provenance.json": "8e6393788a57d17be9633b2898dca24ef07e9e3953c7f403d7ac11c4b940b0c5",
-    "references/differential-crystal.md": "4888d04f8c6e19bfac30d25f7d077d6c6adab00f423ea4f66c732601e33db64c",
+    "provenance.json": "07dabd206b53240ee2f0be954420cf260bf1d6b6d3d2189f165827e1991349c7",
+    "references/differential-crystal.md": "ce3b3a8a4aa8ccd7005ac518ee44843467d9b770e573f8abb973ddd7e802533b",
     "references/layout-manufacturing.md": "dc50b266aeb04d5866bc5ba1b7af1b5f360b9e40c3fb1bb89a94c440d59dbb78",
-    "references/power-ground.md": "a97fe55a11ba5219d49e7a1808ef00dba1abead0ef79a1d93d38ea6169df53c8",
+    "references/power-ground.md": "77f37c434bdfdc89b1f8a264ac3475f886ed1255c6a0d45e7f28dd455393e71a",
     "references/sources.md": "e1e0d56ad343bdf93ffa5f9a4fc372485dcfb7c1ba309c95927d324e18ae74e9",
     "references/verification.md": "1f8b1442f79c03e6e9df33d8d0342deeca33ed19820e15d76021bc1b7979ad7f",
     "scripts/package_skill.py": "6a76c4fa01f3312e5e0c1eb9f15c9301393041a9486a6bb47e3a63ccf957ad29"
