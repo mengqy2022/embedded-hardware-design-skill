@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
@@ -14,11 +14,11 @@
     },
     {
       "path": "engineering/standards/SOURCES.md",
-      "sha256": "ebfdf4dd974a1434425ffae373b98bbaed621e1bfa72b567413257cec488254c"
+      "sha256": "88cf7bb581a02571701b91fa2cf8368862ebf7123bee76c5f52299a73711386e"
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "2aa7d9a3896aa8cb2a48f201fb25f2d4e3adfb91b6de6efabc16dfefb9b3dc6f"
+      "sha256": "8f6447744c3fbf0a04afec364e5920f252317d8c26ddb54c52a1a0fe031e6a89"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -38,14 +38,29 @@
     },
     {
       "path": "engineering/standards/SCHEMATIC_STYLE.md",
-      "sha256": "11000a5adaa04c7cef0634624f3367033e874186b94ae346173b91cc98a974fc"
+      "sha256": "2f69755dc22ecc65c351af6303cf721b0d18cd417517816cfdfc082958da61ea"
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/SCHEMATIC_REVIEW.md",
-      "sha256": "913e0ab9e374a6ee093f410f3adf8467e7433244e24ac49eec2c4e08f671af6c"
+      "sha256": "49d47cb6ed2cebff5127672b2b7c98ee0ba356f7cb5c9423ffdd2ed900be9be7"
     }
   ],
   "updated": "2026-11-02",
   "name": "embedded-hardware-design",
-  "previous_name": "pcb-design-rules"
+  "previous_name": "pcb-design-rules",
+  "upstream_skills": [
+    {
+      "repository": "https://github.com/easyeda/easyeda-enhanced-schematic-skill",
+      "commit": "0c4b9a0ad94d532923dee5c828a6efa7444f4506",
+      "declared_name": "easyeda-schematic-net-fanout",
+      "declared_version": "1.2.0",
+      "reviewed_files": [
+        "SKILL.md",
+        "README.md",
+        "references/esp32-s3-debugger-example.md"
+      ],
+      "integration": "Original summary and corrections, no copied upstream sources or example netlists",
+      "verification": "Original downloaded bytes checked against Git blobs; installed compatibility moved into metadata for local schema, body unchanged; no live EDA execution"
+    }
+  ]
 }

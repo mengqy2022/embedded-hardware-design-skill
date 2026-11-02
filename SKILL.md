@@ -17,6 +17,7 @@ description: 嵌入式原理图绘制、排版、电气审查与 PCB 布局布�
 ## 按任务读取
 
 - **绘制、整理或审查原理图**：必读 [原理图排版 SCH-01～27](references/schematic-style.md)；以 [原理图检查清单](assets/SCHEMATIC_REVIEW.md)记录适用检查。嘉立创EDA的网络标签、NC和检查行为以当前版本实际结果为准。
+- **嘉立创原理图实时自动化**：另读 [API 工作方式与上游取舍](references/easyeda-schematic.md)，执行 SCH-28～34；工具接口查当前已安装 `easyeda-api` 文档。
 - **PCB 布局、封装、机械或丝印**：读 [布局与制造](references/layout-manufacturing.md)，参数记录在 [项目配置模板](assets/PROJECT_RULES.md)或现有项目规则中。
 - **电源、GND 或去耦**：读 [电源与接地](references/power-ground.md)。区分原理图并联拓扑、PCB 低电感回路与布局偏好。
 - **差分线、等长或晶振**：读 [差分与晶振](references/differential-crystal.md)。

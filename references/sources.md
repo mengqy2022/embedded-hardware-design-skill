@@ -1,12 +1,13 @@
 # 来源、许可与适用范围
 
-整理版本：2.0.0，2026-11-02。基于原工作区已保存的核读记录与用户手动布局样本；没有重新全文核读所有网页/PDF。下列页码均为 PDF 文件页序，具体应用还需核对准确器件与版本。
+整理版本：2.1.0，2026-11-02。基于原工作区已保存的核读记录与用户手动布局样本；没有重新全文核读所有网页/PDF。下列页码均为 PDF 文件页序，具体应用还需核对准确器件与版本。
 
 | 编号 | 来源与已核读范围 | 支持的内容和边界 |
 |---|---|---|
 | S01 | SparkFun Electronics / jimblom，[How to Read a Schematic](https://learn.sparkfun.com/tutorials/how-to-read-a-schematic/all)，连接点、网络名与 Schematic Reading Tips | 功能分块、阅读方向和器件资料回查；CC BY-SA 4.0。字体尺寸及 SCH 编号为本地建议 |
 | S03 | [KiCad Schematic Editor 手册](https://docs.kicad.org/master/en/eeschema/eeschema.html)，既有快照 10.99 开发版、修订 e7c04bc7，Connections/Labels/NC/ERC | 连接表达和检查边界；手册 GPL v3+ 或 CC BY 3.0+。嘉立创网络作用域和连接行为须按当前版本验证，本文为概括 |
 | S04 | SparkFun [Pro Micro](https://github.com/sparkfun/Pro_Micro/tree/df836f3bf2955c4f1199a852f618d2ac80866d47/Hardware/v20)，既有固定提交与结构核对 | 开源硬件示例入口，硬件 CC BY-SA 4.0；没有完成全量电气认证，不迁移其参数 |
+| S14 | 嘉立创 [easyeda-enhanced-schematic-skill](https://github.com/easyeda/easyeda-enhanced-schematic-skill/tree/0c4b9a0ad94d532923dee5c828a6efa7444f4506)，SKILL/README/ESP32示例共3文件全文读取；对照本机 easyeda-api 1.1.56 的 LIB_Device、SCH_PrimitiveComponent/Text/Wire/Rectangle、ISCH_PrimitiveWire及文本对齐枚举 | SCH-28～34及嘉立创自动化方法；上游frontmatter声明MIT，仓库本次无独立LICENSE，本包只发布原创概括/取舍，不复制上游原文或示例网表。API与坐标未进行本轮实时验证 |
 | U03 | 用户手动原理图排版要求，2026-10-25 | SCH-23～27：本体/引脚一致、不遮挡、连续同网单标签、功能分框和简洁连接；原始工程与截图不公开 |
 | S02 | SparkFun Electronics / jimblom，[Using EAGLE: Board Layout](https://learn.sparkfun.com/tutorials/using-eagle-board-layout/all)，Arranging/Routing/Checking/Finishing/Generating Gerbers | 布局→布线→检查→生产输出的流程；CC BY-SA 4.0。此处为中文概括重组并加入用户检查要求，旧软件快捷键和制造例值不沿用 |
 | S05 | TI [SLLA414A](https://www.ti.com/lit/an/slla414a/slla414a.pdf)，2026-01修订；p5–6、6–10、12–13、15–18、20–22 | 偏斜、短路径、回流、耦合、过孔、转角与保护。既有记录目视p5/6/8/13/18，其余部分核读正文；不能代替目标芯片、DDR或SerDes专用指南 |

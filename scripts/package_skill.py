@@ -13,7 +13,7 @@ ROOT_FILES = {
 }
 RESOURCE_FILES = {
     "agents/openai.yaml", "assets/PROJECT_RULES.md", "assets/SCHEMATIC_REVIEW.md",
-    "references/schematic-style.md",
+    "references/schematic-style.md", "references/easyeda-schematic.md",
     "references/layout-manufacturing.md", "references/power-ground.md",
     "references/differential-crystal.md", "references/verification.md",
     "references/sources.md", "scripts/package_skill.py",
@@ -63,7 +63,7 @@ def main():
             for rel in sorted(EXPECTED | {"release.json"}):
                 archive.write(ROOT / rel, "embedded-hardware-design/" + rel)
     if args.chatgpt_output:
-        sections = ["SKILL.md", "references/schematic-style.md", "assets/SCHEMATIC_REVIEW.md", "references/layout-manufacturing.md", "references/power-ground.md",
+        sections = ["SKILL.md", "references/schematic-style.md", "references/easyeda-schematic.md", "assets/SCHEMATIC_REVIEW.md", "references/layout-manufacturing.md", "references/power-ground.md",
                     "references/differential-crystal.md", "references/verification.md",
                     "references/sources.md", "assets/PROJECT_RULES.md"]
         parts = [f"# 嵌入式原理图与 PCB 可携带规则 {manifest['version']}\n\n"

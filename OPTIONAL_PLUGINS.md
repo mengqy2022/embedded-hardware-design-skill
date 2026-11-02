@@ -31,3 +31,11 @@ codex plugin add mattpocock-skills@mattpocock
 ## 普通 ChatGPT
 
 上述命令属于支持插件的代理环境，不是在普通ChatGPT聊天输入框执行的安装命令。在普通聊天使用导出的规则Markdown和明确任务指令即可；不能据此宣称第三方插件已经安装或运行。
+
+## 嘉立创原理图增强 Skill
+
+[上游仓库](https://github.com/easyeda/easyeda-enhanced-schematic-skill)，本次读取固定提交 `0c4b9a0ad94d532923dee5c828a6efa7444f4506`；上游 SKILL.md 声明的名称是 `easyeda-schematic-net-fanout`（版本1.2.0），不是仓库名。需要安装原版时可要求代理从该仓库安装到全局 Skill 目录，并保留声明的名称。实时操作依赖 `easyeda-api`、Node.js及已连接的 Run API Gateway；规则包自身不提供这些工具。
+
+本整合包已概括适用方法，见[嘉立创自动化](references/easyeda-schematic.md)，普通规则任务无需重复加载整份上游示例。独立调用上游前仍须应用项目边界及本包的冲突取舍：不逐脚重复贴名、不全部设BI、不跳过必接EP/GND脚、不凭区域坐标删除共享连接。上游示例不是经验证可直接用于其他板的电路方案。
+
+若宿主的Skill校验器不接受上游顶层 `compatibility`，备份原文件后只将该字段移到 `metadata.compatibility`，保留正文并记录本地适配。原始来源固定提交与安装副本的本地变更分别记录。

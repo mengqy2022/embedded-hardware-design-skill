@@ -1,6 +1,6 @@
 # Embedded Hardware Design Skill
 
-**嵌入式原理图与 PCB 设计规则，版本 2.0.0。** 由 `pcb-design-rules` 升级并改名为 `embedded-hardware-design`，原有 PCB 规则继续保留，完整加入原理图排版 SCH-01～27 和检查模板。
+**嵌入式原理图与 PCB 设计规则，版本 2.1.0。** 由 `pcb-design-rules` 升级并改名为 `embedded-hardware-design`，原有 PCB 规则继续保留，完整加入原理图排版 SCH-01～27、嘉立创自动化补充 SCH-28～34 和检查模板。
 
 适用于嘉立创EDA等工具中的常见低压嵌入式硬件设计。按任务读取规则，器件和制造参数由项目确定；本 Skill 不附带 EDA 控制工具或用户工程。
 
@@ -11,6 +11,7 @@
 | 工作入口与范围 | [SKILL.md](SKILL.md) |
 | 原理图功能分区、符号/引脚、连线、命名与排版 | [SCH-01～27](references/schematic-style.md) |
 | 原理图电气、视觉和数据一致性检查 | [检查模板](assets/SCHEMATIC_REVIEW.md) |
+| 嘉立创自动化：查料、引脚扇出、对象修改与核验 | [API工作方式与取舍](references/easyeda-schematic.md) |
 | PCB 布局、封装、机械与丝印 | [布局与制造](references/layout-manufacturing.md) |
 | 电源、GND、去耦与输入/输出电容 | [电源与接地](references/power-ground.md) |
 | 差分、等长与晶振 | [差分与晶振](references/differential-crystal.md) |
@@ -21,13 +22,13 @@
 
 ## 在 Codex 中安装或迁移
 
-[GitHub 仓库](https://github.com/mengqy2022/embedded-hardware-design-skill) · [v2.0.0 发布与附件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.0.0)
+[GitHub 仓库](https://github.com/mengqy2022/embedded-hardware-design-skill) · [v2.1.0 发布与附件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.1.0)
 
-下载发布附件 `embedded-hardware-design-2.0.0.zip`。ZIP 内只有一个 `embedded-hardware-design/` 目录，不包含 `.git`。Windows PowerShell 首次安装示例：
+下载发布附件 `embedded-hardware-design-2.1.0.zip`。ZIP 内只有一个 `embedded-hardware-design/` 目录，不包含 `.git`。Windows PowerShell 首次安装示例：
 
 ```powershell
-$skillZip = Join-Path $env:TEMP 'embedded-hardware-design-2.0.0.zip'
-Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/download/v2.0.0/embedded-hardware-design-2.0.0.zip' -OutFile $skillZip
+$skillZip = Join-Path $env:TEMP 'embedded-hardware-design-2.1.0.zip'
+Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/download/v2.1.0/embedded-hardware-design-2.1.0.zip' -OutFile $skillZip
 Expand-Archive -LiteralPath $skillZip -DestinationPath "$env:USERPROFILE/.codex/skills"
 ```
 
@@ -75,7 +76,7 @@ Expand-Archive -LiteralPath $skillZip -DestinationPath "$env:USERPROFILE/.codex/
 Python 3.10+，仅使用标准库：
 
 ```powershell
-python scripts/package_skill.py --refresh --output ../embedded-hardware-design-2.0.0.zip --chatgpt-output ../HARDWARE_DESIGN_RULES_CHATGPT.md
+python scripts/package_skill.py --refresh --output ../embedded-hardware-design-2.1.0.zip --chatgpt-output ../HARDWARE_DESIGN_RULES_CHATGPT.md
 python scripts/package_skill.py --verify
 ```
 
