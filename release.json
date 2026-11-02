@@ -1,22 +1,24 @@
 {
-  "name": "pcb-design-rules",
-  "version": "1.2.0",
+  "name": "embedded-hardware-design",
+  "version": "2.0.0",
   "sha256": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     ".gitignore": "d85e869880ce59f80b6ff556112ef93ea215e5966f8a1633cbaac84b28e26889",
-    "CHANGELOG.md": "3f75ff738059f32964c8247ad26b8bc3cae32303170541f61f086973f7a8a52d",
+    "CHANGELOG.md": "c479993b93f9cfcd14f1cf5558145585265c2531578d968ffb80c29fffd73005",
     "LICENSE": "5b3fc7598797710cfeecc9a9eb592907b62d831048f3eadd1db84ef37cdeb3ea",
-    "OPTIONAL_PLUGINS.md": "7d2c1795eef56170696be70d98c45bcebec94ea007a331f0629e543da508c27c",
-    "README.md": "ba460790f6671b47148201b26259f925a200ccafc9915eb78791c59f4d9ea2c5",
-    "SKILL.md": "87c9f540072f0517c99bb4648863f5593534381c8854673a10d2c2fcf1abd63a",
-    "agents/openai.yaml": "d11e83b1a2715f39452f414f21e12af724a1404b2989477284ceb17b1ae185f6",
-    "assets/PROJECT_RULES.md": "789352dbbdc5a79ec45a48526e487ebd9301d8cd9b53d9cf2a39e97fbd3bec04",
-    "provenance.json": "194da90ffc00db77982a6afdc6b832d4046b0a502170db0decf34347389a827c",
+    "OPTIONAL_PLUGINS.md": "7d73f5bebfa6f077e3a33e7d7bfcc81495d7f9985c16d5356f28f86f69ec61e6",
+    "README.md": "9a33d3d8b073743004dca014fc515fe33d1e9a3bcb2af79d415acdc0ce104de0",
+    "SKILL.md": "b8a1d9fa6e5e28d1de24daecebe9ed50cc0076d3f61edc040ce6f2f422e4d0e2",
+    "agents/openai.yaml": "5d29e59ba1649a81c1c4232d404473f0db215649349b6fabe24d7d1879bcaa5d",
+    "assets/PROJECT_RULES.md": "20062ee0a051f11375c6b5b87d38c1d2e303203500637f7801220a97a85cfd0d",
+    "assets/SCHEMATIC_REVIEW.md": "5d29429afc2e3a9a6eb9e14203adcb06c7bd475a9f35b7e68554d29f27a47872",
+    "provenance.json": "5f02e2408e47bd7985f6ca9b4795546e90c44053ede9ab5ccc126d7a79d0c9c6",
     "references/differential-crystal.md": "ce3b3a8a4aa8ccd7005ac518ee44843467d9b770e573f8abb973ddd7e802533b",
     "references/layout-manufacturing.md": "dc50b266aeb04d5866bc5ba1b7af1b5f360b9e40c3fb1bb89a94c440d59dbb78",
-    "references/power-ground.md": "d262674e1a91247a861d84bf5269332c4a72077383ec0cbd5c0e35cc7d931885",
-    "references/sources.md": "e1e0d56ad343bdf93ffa5f9a4fc372485dcfb7c1ba309c95927d324e18ae74e9",
-    "references/verification.md": "18439a846868b9035319d8d69794c72feb54de4f1e9fc69280925213c6916b17",
-    "scripts/package_skill.py": "6a76c4fa01f3312e5e0c1eb9f15c9301393041a9486a6bb47e3a63ccf957ad29"
+    "references/power-ground.md": "f02510d177452c06101f2aae3f0e9963ed4bb5cdeacb39ed4236f13073a17b84",
+    "references/schematic-style.md": "750e38c3bcc796d2ef0dc234cdafa34f83ab8da3014530c329ed513b81c2ed86",
+    "references/sources.md": "555f669335eebb2f1ee90722bc1e11b7d019ab6c2b62712806b2d73aac93965f",
+    "references/verification.md": "34d9bf25999e469d6002dbd38e1bd0f8ab5bf866a7b0421a7a719296f091ae9c",
+    "scripts/package_skill.py": "ded7c22cabea217e720dcd37f0a07f5e516241b8e7bcfa14c2e994fb90f3e12b"
   }
 }

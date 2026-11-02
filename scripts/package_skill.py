@@ -1,4 +1,4 @@
-"""Verify or package a reviewed PCB rules release, using only the standard library."""
+"""Verify or package a reviewed schematic and PCB rules release, using only the standard library."""
 import argparse
 import hashlib
 import json
@@ -12,7 +12,8 @@ ROOT_FILES = {
     "LICENSE", ".gitignore", ".gitattributes", "provenance.json",
 }
 RESOURCE_FILES = {
-    "agents/openai.yaml", "assets/PROJECT_RULES.md",
+    "agents/openai.yaml", "assets/PROJECT_RULES.md", "assets/SCHEMATIC_REVIEW.md",
+    "references/schematic-style.md",
     "references/layout-manufacturing.md", "references/power-ground.md",
     "references/differential-crystal.md", "references/verification.md",
     "references/sources.md", "scripts/package_skill.py",
@@ -48,7 +49,7 @@ def main():
         actual[rel] = digest(path)
     if args.refresh:
         version = json.loads((ROOT / "provenance.json").read_text(encoding="utf-8"))["version"]
-        MANIFEST.write_text(json.dumps({"name": "pcb-design-rules", "version": version,
+        MANIFEST.write_text(json.dumps({"name": "embedded-hardware-design", "version": version,
                                       "sha256": actual}, ensure_ascii=False, indent=2) + "\n",
                             encoding="utf-8", newline="\n")
     if not MANIFEST.is_file():
@@ -60,12 +61,12 @@ def main():
         args.output.parent.mkdir(parents=True, exist_ok=True)
         with ZipFile(args.output, "w", ZIP_DEFLATED) as archive:
             for rel in sorted(EXPECTED | {"release.json"}):
-                archive.write(ROOT / rel, "pcb-design-rules/" + rel)
+                archive.write(ROOT / rel, "embedded-hardware-design/" + rel)
     if args.chatgpt_output:
-        sections = ["SKILL.md", "references/layout-manufacturing.md", "references/power-ground.md",
+        sections = ["SKILL.md", "references/schematic-style.md", "assets/SCHEMATIC_REVIEW.md", "references/layout-manufacturing.md", "references/power-ground.md",
                     "references/differential-crystal.md", "references/verification.md",
                     "references/sources.md", "assets/PROJECT_RULES.md"]
-        parts = [f"# PCB 可携带规则 {manifest['version']}\n\n"
+        parts = [f"# 嵌入式原理图与 PCB 可携带规则 {manifest['version']}\n\n"
                  "供上传聊天或项目知识文件。按当前项目任务读取适用部分；本文件不提供EDA控制能力。"
                  "相对链接在合并时改为文字；外部来源链接保留。\n"]
         for rel in sections:
@@ -78,7 +79,7 @@ def main():
         args.chatgpt_output.parent.mkdir(parents=True, exist_ok=True)
         args.chatgpt_output.write_text("\n\n---\n\n".join(parts) + "\n", encoding="utf-8", newline="\n")
     print(f"Release {manifest['version']}: {len(actual)} file hashes verified. "
-          "This checks package integrity, not PCB correctness.")
+          "This checks package integrity, not circuit or PCB correctness.")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # 可选工作方式插件
 
-这些插件帮助控制改动规模、调查问题和记录证据，不提供PCB电气正确性保证，也不替代EDA工具。本Skill无需它们也能工作；首次确有需要时提示安装一次即可，用户未安装时继续完成已能开展的工作。
+这些插件帮助控制改动规模、调查问题和记录证据，不提供原理图或PCB电气正确性保证，也不替代EDA工具。本Skill无需它们也能工作；首次确有需要时提示安装一次即可，用户未安装时继续完成已能开展的工作。
 
 下列命令来自安装时核读的上游说明：Ponytail 5.3.3的INSTALL.md、mattpocock-skills 1.3.2的README.md，核对日期2026-11-01。目标Codex须支持相应`plugin`命令；版本不支持时查上游适配说明，不反复试错安装。
 
@@ -13,7 +13,7 @@ codex plugin marketplace add DietrichGebert/ponytail
 codex plugin add ponytail@ponytail
 ```
 
-按上游说明，在支持的Codex会话中查看`/hooks`、审阅并选择信任其生命周期Hooks；开始新会话，桌面端必要时重启。用户自行决定是否启用Hooks。PCB任务借用其“复用已有内容、最小完整改动、简短且有证据的反馈”方式。
+按上游说明，在支持的Codex会话中查看`/hooks`、审阅并选择信任其生命周期Hooks；开始新会话，桌面端必要时重启。用户自行决定是否启用Hooks。硬件任务借用其“复用已有内容、最小完整改动、简短且有证据的反馈”方式。
 
 ## Codex：mattpocock-skills
 

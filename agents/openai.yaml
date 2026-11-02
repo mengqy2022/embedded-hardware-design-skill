@@ -1,4 +1,4 @@
 interface:
-  display_name: "PCB 设计规则"
-  short_description: "复用 PCB 布局布线规则，按项目确定参数并保留当前修订的核验证据"
-  default_prompt: "使用 $pcb-design-rules 读取当前项目约束，完成所需 PCB 布局、布线或审查并记录核验证据。"
+  display_name: "嵌入式原理图与 PCB 设计"
+  short_description: "统一原理图排版、电气审查与 PCB 布局布线，按项目记录核验证据"
+  default_prompt: "使用 $embedded-hardware-design 读取当前工程和约束，按任务完成原理图或 PCB 设计并记录核验证据。"
