@@ -1,16 +1,16 @@
 {
-  "version": "2.2.0",
+  "version": "2.2.1",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "6220ba347e3faba5e6fb3a9ae8df16ca269590b536395e1c03aa88f2b4c08cb2"
+      "sha256": "58d293490389e4532cb3698a6cca1ec3cacd4fba6de270c730513d31c715b2cb"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "6623c0e7bf0dc2162e689994e95ccf3fb2795673e560973c6538d42547b10787"
+      "sha256": "466305440709085c1a461bb18db1f223e3b9716c947daf7e219897404c319cf8"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "d4ce01e41bb0dec50c9bd253508c6e4e30f4f2196f5bd9920499b1438af0ff0d"
+      "sha256": "3fcbfd01da420a16eeef2f568ea3221095b10c70760e45cfd4aa17f7fc2a917c"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -30,11 +30,11 @@
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
-      "sha256": "ef400856506ae3bde978ee3b27ed5ab9ca9131e108c28beab9d5813ef02997d2"
+      "sha256": "873fd9ecb086b41d8c9171ad114a4522caa62529a1504d4bcaec732d4c5d24fc"
     },
     {
       "path": "engineering/tools/check_pcb_rule_gate.py",
-      "sha256": "30f42fbc341ba4ba2489d5a1f788bbf51e3462c42eec8c8548a7fecfac54b883"
+      "sha256": "d91215a316aeee514800a122ce1feca08177083b5f2838740cc4fb924877f7ed"
     },
     {
       "path": "engineering/standards/SCHEMATIC_STYLE.md",
@@ -84,5 +84,11 @@
     "export_tool": "EasyEDA Pro V4.1.60 / easyeda-api 1.1.56",
     "verification": "Read/export and style review only; no circuit edits, ERC/DRC, SI/PI or measurements",
     "redistribution": "Original method summaries only; source projects, images, netlists and private identifiers excluded"
+  },
+  "teardrop_finish_rule": {
+    "date": "2026-11-02",
+    "source": "User instruction",
+    "scope": "User default sequence, not universal coverage requirement",
+    "rule": "PCB-V06"
   }
 }

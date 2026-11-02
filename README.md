@@ -1,6 +1,6 @@
 # Embedded Hardware Design Skill
 
-**嵌入式原理图与 PCB 设计规则，版本 2.2.0。** 由 `pcb-design-rules` 升级并改名为 `embedded-hardware-design`，原有 PCB 规则继续保留，完整加入原理图排版 SCH-01～27、嘉立创自动化补充 SCH-28～34 和检查模板。
+**嵌入式原理图与 PCB 设计规则，版本 2.2.1。** 由 `pcb-design-rules` 升级并改名为 `embedded-hardware-design`，原有 PCB 规则继续保留，完整加入原理图排版 SCH-01～27、嘉立创自动化补充 SCH-28～34 和检查模板。
 
 适用于嘉立创EDA等工具中的常见低压嵌入式硬件设计。按任务读取规则，器件和制造参数由项目确定；本 Skill 不附带 EDA 控制工具或用户工程。
 
