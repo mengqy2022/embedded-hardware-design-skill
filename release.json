@@ -1,25 +1,26 @@
 {
   "name": "embedded-hardware-design",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "sha256": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     ".gitignore": "d85e869880ce59f80b6ff556112ef93ea215e5966f8a1633cbaac84b28e26889",
-    "CHANGELOG.md": "80376766914496781df7a8a5777173e09b8762b8e9afbb8e4ebba2c7c746cf71",
+    "CHANGELOG.md": "d1d7e1960bcd4e4161905573e913d0dada0efa1ada490104abd147502ee9b3bb",
     "LICENSE": "5b3fc7598797710cfeecc9a9eb592907b62d831048f3eadd1db84ef37cdeb3ea",
     "OPTIONAL_PLUGINS.md": "6a3ad9eeb6c2f49e6f718c12a634434bfb07afa51dabed504debd2f8a77ff067",
-    "README.md": "b9fea9476621ef6bd277f84f181678ec5d21f1bfaabd79d86072674f57298deb",
-    "SKILL.md": "a530bffbc0958b421eb28e41dd00e2b3eaf2eb51922ed744a947897b5cfac952",
+    "README.md": "8e9570c44cc06368dfa6ce448df4648d41e1eaed2b8cf9b798ec93e8a0817b97",
+    "SKILL.md": "a016c4a80685e1c0aa2eaed6a74c00314d975f94aa55c75be19a24686da34bd7",
     "agents/openai.yaml": "5d29e59ba1649a81c1c4232d404473f0db215649349b6fabe24d7d1879bcaa5d",
     "assets/PROJECT_RULES.md": "20062ee0a051f11375c6b5b87d38c1d2e303203500637f7801220a97a85cfd0d",
-    "assets/SCHEMATIC_REVIEW.md": "4201f570732d59bb8d3f4822805fd8f46662c589ef49316eec2d3df52f578d27",
-    "provenance.json": "2e2ad2f04de9375991dd61ff14a4fc84db32630e996a5cbe3b2ca84ada6e6476",
+    "assets/SCHEMATIC_REVIEW.md": "5ad67c5046c4a6b85204014e83cd56d55605a04eab65a26e60400abb10a42292",
+    "provenance.json": "8208338d0fcfdd46b75b7217bb6be4bed4f6ac38623d5f229675a980cb5cb066",
     "references/differential-crystal.md": "ce3b3a8a4aa8ccd7005ac518ee44843467d9b770e573f8abb973ddd7e802533b",
     "references/easyeda-schematic.md": "a54193505b1e8fa623029d63ae6d68e4f4c90f64e379047c89639307858d5869",
     "references/layout-manufacturing.md": "dc50b266aeb04d5866bc5ba1b7af1b5f360b9e40c3fb1bb89a94c440d59dbb78",
     "references/power-ground.md": "f02510d177452c06101f2aae3f0e9963ed4bb5cdeacb39ed4236f13073a17b84",
-    "references/schematic-style.md": "734fab659fc59a3c9cb2daa9a75935c37593e42f0232f7d05d5f843b1a3a799a",
-    "references/sources.md": "0dd90de2ac7806e43763fb87528d2c52e5456143173f51e2b823eaee19faa570",
+    "references/schematic-examples.md": "4a3e817c5975200558a9325f4933bc1c1ddb9f119665564639557a7bb0f9581f",
+    "references/schematic-style.md": "c6426892466986ff11e0ed4524ada4c678b55d238325e58bd34bb5a3f7fb1724",
+    "references/sources.md": "3b14793874e5e44e4b63d23b0055eb250740cb806c75b8403bb1c69a46124c95",
     "references/verification.md": "34d9bf25999e469d6002dbd38e1bd0f8ab5bf866a7b0421a7a719296f091ae9c",
-    "scripts/package_skill.py": "204f03a199f6ace3f0fd49ebed029680ccf36a137168ff1028f6542c779df463"
+    "scripts/package_skill.py": "4f5cac9e6980f26310be812ca2d186b6594b976691c8c2b1a386fc623025f4ae"
   }
 }

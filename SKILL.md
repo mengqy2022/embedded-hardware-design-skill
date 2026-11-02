@@ -22,6 +22,7 @@ description: 嵌入式原理图绘制、排版、电气审查与 PCB 布局布�
 - **电源、GND 或去耦**：读 [电源与接地](references/power-ground.md)。区分原理图并联拓扑、PCB 低电感回路与布局偏好。
 - **差分线、等长或晶振**：读 [差分与晶振](references/differential-crystal.md)。
 - **核验与交付**：读 [核验与证据](references/verification.md)。
+- **借鉴工程版式或处理排版规则冲突**：读 [样本方法与取舍](references/schematic-examples.md)，按规模选单页/层次图，区分视觉观察与电气证据。
 - **查证参数或更新规则**：读 [来源及适用边界](references/sources.md)，再定向查准确原厂原页。
 - **安装、迁移或工作方式插件**：读 [使用说明](README.md)和 [可选插件](OPTIONAL_PLUGINS.md)。
 

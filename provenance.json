@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
@@ -14,11 +14,11 @@
     },
     {
       "path": "engineering/standards/SOURCES.md",
-      "sha256": "88cf7bb581a02571701b91fa2cf8368862ebf7123bee76c5f52299a73711386e"
+      "sha256": "9c510955a6a771a333544bdf7d2df644780e66eebcbdb0f91c29f2f98bc3c4c8"
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "8f6447744c3fbf0a04afec364e5920f252317d8c26ddb54c52a1a0fe031e6a89"
+      "sha256": "d4ce01e41bb0dec50c9bd253508c6e4e30f4f2196f5bd9920499b1438af0ff0d"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -38,11 +38,23 @@
     },
     {
       "path": "engineering/standards/SCHEMATIC_STYLE.md",
-      "sha256": "2f69755dc22ecc65c351af6303cf721b0d18cd417517816cfdfc082958da61ea"
+      "sha256": "265ee1db6939ff8f03ab31cea04af2e909d66c6a97f4d4fa20433ad3372c058e"
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/SCHEMATIC_REVIEW.md",
-      "sha256": "49d47cb6ed2cebff5127672b2b7c98ee0ba356f7cb5c9423ffdd2ed900be9be7"
+      "sha256": "0f1982398347b408ac5e4523b73b4f244ec684c615e93b82eeba13ba1b656ae7"
+    },
+    {
+      "path": "engineering/notes/SCHEMATIC_EXAMPLE_STUDY_20261102.md",
+      "sha256": "6284064821b952b9a944341eef15e5af25c531d59fe28d75781987c7c83fbf3f"
+    },
+    {
+      "path": "engineering/notes/SCHEMATIC_STYLE_PRIMARY_REVIEW_20261102.md",
+      "sha256": "71a83dcfc9bb5831fe843ac53a5ad60197cdd5e2d63eb595e71ec896b72bc952"
+    },
+    {
+      "path": "engineering/notes/SCHEMATIC_LARGE_BOARD_SAMPLES_20261102.md",
+      "sha256": "d8854eb630eb7e52ce9f91c9447fa1f7ff549bb464e7673733f821a65024642e"
     }
   ],
   "updated": "2026-11-02",
@@ -62,5 +74,15 @@
       "integration": "Original summary and corrections, no copied upstream sources or example netlists",
       "verification": "Original downloaded bytes checked against Git blobs; installed compatibility moved into metadata for local schema, body unchanged; no live EDA execution"
     }
-  ]
+  ],
+  "sample_review": {
+    "date": "2026-11-02",
+    "projects": 9,
+    "native_pages": 84,
+    "overview_pages": 84,
+    "representative_detail_pages": 21,
+    "export_tool": "EasyEDA Pro V4.1.60 / easyeda-api 1.1.56",
+    "verification": "Read/export and style review only; no circuit edits, ERC/DRC, SI/PI or measurements",
+    "redistribution": "Original method summaries only; source projects, images, netlists and private identifiers excluded"
+  }
 }
