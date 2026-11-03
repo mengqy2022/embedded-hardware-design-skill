@@ -1,5 +1,5 @@
 {
-  "version": "2.2.2",
+  "version": "2.2.3",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
@@ -10,7 +10,7 @@
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "4854b65fbf50d2495e67d9c01ed81e90dafe58a668eda08d24a7f5a9a5ff89f3"
+      "sha256": "e709c6834c39a37fab00f79bf62eca2fd11bfffa29a99b621eeb986894495b23"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -90,5 +90,15 @@
     "source": "User instruction",
     "scope": "User default sequence, not universal coverage requirement",
     "rule": "PCB-V06"
+  },
+  "assembly_decoupling_review": {
+    "date": "2026-11-03",
+    "rules": [
+      "PCB-V04",
+      "PCB-L01",
+      "PCB-L17",
+      "PCB-L20"
+    ],
+    "source": "User feedback and PCB copper-path/assembly review; geometric evidence does not prove measured performance"
   }
 }
