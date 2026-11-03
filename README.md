@@ -1,90 +1,134 @@
-# Embedded Hardware Design Skill
+<div align="center">
 
-**嵌入式原理图与 PCB 设计规则，版本 2.2.1。** 由 `pcb-design-rules` 升级并改名为 `embedded-hardware-design`，原有 PCB 规则继续保留，完整加入原理图排版 SCH-01～27、嘉立创自动化补充 SCH-28～34 和检查模板。
+![Embedded Hardware Design — Schematic. Layout. Routing. Evidence.](assets/cover.svg)
 
-适用于嘉立创EDA等工具中的常见低压嵌入式硬件设计。按任务读取规则，器件和制造参数由项目确定；本 Skill 不附带 EDA 控制工具或用户工程。
+# Embedded Hardware Design
 
-## 内容与入口
+**让原理图清楚易读，让 PCB 设计有据可查。**
 
-| 任务 | 文件 |
-|---|---|
-| 工作入口与范围 | [SKILL.md](SKILL.md) |
-| 原理图功能分区、符号/引脚、连线、命名与排版 | [SCH-01～27](references/schematic-style.md) |
-| 工程样本的方法、反例与规则冲突处理 | [样本学习与取舍](references/schematic-examples.md) |
-| 原理图电气、视觉和数据一致性检查 | [检查模板](assets/SCHEMATIC_REVIEW.md) |
-| 嘉立创自动化：查料、引脚扇出、对象修改与核验 | [API工作方式与取舍](references/easyeda-schematic.md) |
-| PCB 布局、封装、机械与丝印 | [布局与制造](references/layout-manufacturing.md) |
-| 电源、GND、去耦与输入/输出电容 | [电源与接地](references/power-ground.md) |
-| 差分、等长与晶振 | [差分与晶振](references/differential-crystal.md) |
-| 项目参数、验证与交付 | [项目配置](assets/PROJECT_RULES.md)、[核验证据](references/verification.md) |
-| 来源、许可和适用边界 | [sources.md](references/sources.md) |
+面向 AI 辅助嵌入式硬件设计的可携带规则、检查模板与证据门槛。
 
-去耦电容通常并联；大到小的物理排列是有条件的用户偏好。直接平面供电不必然使去耦失效，芯片要求、低电感供地回路和稳定性优先。100 nF、线宽或固定蛇形容差不推广为所有器件的电气标准。
+[![Release](https://img.shields.io/github/v/release/mengqy2022/embedded-hardware-design-skill?style=flat-square&color=0f766e)](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/latest)
+[![CI](https://github.com/mengqy2022/embedded-hardware-design-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/mengqy2022/embedded-hardware-design-skill/actions/workflows/ci.yml)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-334155?style=flat-square)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-334155?style=flat-square)](https://www.python.org/downloads/)
 
-## 在 Codex 中安装或迁移
+**简体中文** · [English](README.en.md) · [快速安装](docs/INSTALLATION.md) · [版本记录](CHANGELOG.md) · [提出建议](https://github.com/mengqy2022/embedded-hardware-design-skill/issues/new/choose)
 
-[GitHub 仓库](https://github.com/mengqy2022/embedded-hardware-design-skill) · [v2.3.0 发布与附件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.0)
+</div>
 
-下载发布附件 `embedded-hardware-design-2.3.0.zip`。ZIP 内只有一个 `embedded-hardware-design/` 目录，不包含 `.git`。Windows PowerShell 首次安装示例：
+## 最新进展
 
-```powershell
-$skillZip = Join-Path $env:TEMP 'embedded-hardware-design-2.3.0.zip'
-Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/download/v2.3.0/embedded-hardware-design-2.3.0.zip' -OutFile $skillZip
-Expand-Archive -LiteralPath $skillZip -DestinationPath "$env:USERPROFILE/.codex/skills"
-```
+<!-- release:start -->
+**[v2.3.1](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1) · 2026-11-03**
 
-已有 `pcb-design-rules` 时，先备份并移出宿主扫描的 skills 目录，再安装新名；已有 `embedded-hardware-design` 时先比较/备份再替换，避免旧文件混入。历史旧名完成迁移后，通常只保留新 Skill。若宿主使用 `~/.agents/skills` 或自定义目录，安装到它实际识别的位置。
+- 重做中英文 README：增加原创封面、最新版本摘要、规则导航、安装升级入口和工具适用边界，修正首页版本滞后。
+- 新增贡献指南、问题/规则建议与 PR 模板、安装及发布文档，延续现有来源归属与 CC BY-SA 4.0 许可。
+- 从版本元数据和 CHANGELOG 自动生成双语首页摘要与 Release 说明；CI 检查版本、链接、包指纹和辅助脚本，并在匹配标签时构建发布附件及 SHA-256 校验文件。
+- 设计规则与 PCB-V07 行为沿用 2.3.0，本版聚焦文档和发布维护，不代表任何板卡新增验证通过。
 
-新建会话核对技能列表；未刷新时重启宿主。原调用 `$pcb-design-rules` 改为 `$embedded-hardware-design`。例如：
+[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1)
+<!-- release:end -->
 
-```text
-使用 $embedded-hardware-design，整理当前原理图。
-先读取 SCH-01～27，以我当前手绘布局为起点，保持网表不变，完成视觉检查和原理图检查。
-```
+## 能解决什么
 
-```text
-使用 $embedded-hardware-design，继续当前 PCB 布局布线。
-读取项目 DESIGN_RULES.md 和实时工程，保留原理图网络、已完成敏感通道与锁定机械对象。
-```
+把原理图排版、PCB 布局布线和交付检查串成可复用的工作方式。规则按任务读取，复用现有工程与已验证记录，减少重复解释和无关修改。
 
-目标项目 `AGENTS.md` 可加入：
+| 设计环节 | 关注内容 | 入口 |
+| --- | --- | --- |
+| 原理图 | 功能分区、引脚与符号一致、连线清晰、标签与字体不重叠 | [SCH 规范](references/schematic-style.md) |
+| PCB 布局 | 锁定机械条件、器件装配间距、接口位置、丝印可读性 | [布局与制造](references/layout-manufacturing.md) |
+| 供电与回流 | 逐电源脚去耦、输入/输出电容、低电感回路、真实 GND 铜路 | [电源与接地](references/power-ground.md) |
+| 敏感网络 | 差分耦合、连续参考、必要等长、晶振敏感区域 | [差分与晶振](references/differential-crystal.md) |
+| 阶段验收 | 器件/电源脚覆盖、当前修订证据、原生 DRC、制造输出 | [PCB-V07](references/pcb-stage-review.md) |
 
-```text
-原理图或 PCB 设计使用 embedded-hardware-design；按任务读取 SCH 规范或 PCB 细则，遵循项目规则和当前用户手绘基线，记录适用版本与核验证据。
-```
+**适用范围：** 常见低压嵌入式硬件。器件参数、叠层、阻抗、电流和制造工艺按项目确定；高压、隔离、DDR、RF 等专用设计另查准确指南。规则包提供设计方法，实时操作由独立的 EDA 工具完成。
 
-嘉立创实时操作需另行连接 `easyeda-api` 等工具；KiCad 原生编辑使用其受支持的工具链。没有实时工具时可以审查资料，不能报告已编辑或已运行原生 ERC/DRC。
+## 三步开始
 
-## 在普通 ChatGPT 中使用
+### 1. 安装规则
 
-下载并上传发布附件 `HARDWARE_DESIGN_RULES_CHATGPT.md`。若产品支持项目知识文件，可放入专用项目，并添加：
-
-```text
-原理图或 PCB 任务先读取 HARDWARE_DESIGN_RULES_CHATGPT.md 和本项目规则。
-按任务应用 SCH/PCB 规则，器件参数以准确原厂资料为准；保持未检查项，没有工具证据不报告检查或实测通过。
-```
-
-另外提供工程、网表、当前项目说明，以及适用的机械、叠层和板厂条件。上传规则文件不等于永久训练模型，也不会自动获得 EDA 控制能力。
-
-## Ponytail 与 mattpocock-skills
-
-保留 [OPTIONAL_PLUGINS.md](OPTIONAL_PLUGINS.md) 中的可选安装提示。它们提供控制改动规模和定向研究的工作方式，不是本 Skill 的强制依赖；不自动安装、信任 Hooks 或更改全局配置。
-
-## 维护与发布
-
-当前维护版2.3.0增加[PCB-V07阶段门槛](references/pcb-stage-review.md)：大规模布线前及交付前，按[记录模板](assets/PCB_STAGE_REVIEW.json)检查全器件装配、逐电源脚供电/完整回地与适用规则。运行 `python scripts/check_pcb_stage.py <阶段记录.json> --pcb <当前导出.epcb> --stage final`（布局阶段改为layout）；缺项、失败或证据哈希过期时返回非零。它检查记录覆盖和版本，不运行EDA或证明电气性能。可复用现有核验报告，无需重复全文读取。
-
-本仓库是可携带规则的维护源，安装目录为部署副本。更新时同步相关工作区/项目规则，保留 SCH/PCB 编号、来源和适用边界，记录 [CHANGELOG](CHANGELOG.md) 与 [来源指纹](provenance.json)。新项目记录实际使用版本和提交；历史通过结论只对应历史修订。
-
-Python 3.10+，仅使用标准库：
+在 [最新 Release](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/latest) 下载 `embedded-hardware-design.zip`；Windows PowerShell **首次安装**：
 
 ```powershell
-python scripts/package_skill.py --refresh --output ../embedded-hardware-design-2.3.0.zip --chatgpt-output ../HARDWARE_DESIGN_RULES_CHATGPT.md
-python scripts/package_skill.py --verify
+$skillArchive = Join-Path $env:TEMP 'embedded-hardware-design.zip'
+Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/latest/download/embedded-hardware-design.zip' -OutFile $skillArchive
+Expand-Archive -LiteralPath $skillArchive -DestinationPath "$env:USERPROFILE/.codex/skills"
 ```
 
-`--refresh` 在人工审阅后记录文件哈希；`--verify` 只检查包完整性。规则更新不自动重验现有 PCB，也不能证明电气、SI/PI、EMC 或实物功能通过。打包采用显式文件清单，排除厂商 PDF、截图、原生工程、私有坐标/网表及对话记录。
+新建会话核对 Skill 列表。已有安装或旧名 `pcb-design-rules` 时，按 [升级与迁移](docs/INSTALLATION.md#升级与迁移) 先备份再替换。发布附件附带 `SHA256SUMS.txt`。
 
-## 来源与许可
+普通 ChatGPT 可上传 Release 中的 `HARDWARE_DESIGN_RULES_CHATGPT.md`；工具连接和可选插件见 [完整安装说明](docs/INSTALLATION.md)。
 
-规则按 [CC BY-SA 4.0](LICENSE) 提供；[来源表](references/sources.md)保留作者、链接、版本/页码和边界。厂商资料与第三方插件按各自许可，不随本包再分发或再授权。SCH 规范中的排版尺寸为工作习惯，不是制造或电气标准。
+### 2. 带上工程与约束
+
+提供当前工程、项目规则、准确器件资料，以及板框、锁定器件、叠层和板厂条件。示例：
+
+```text
+使用 $embedded-hardware-design 优化当前原理图与 PCB。
+先读取项目说明、规则和现有核验报告；保持未授权的网络与锁定机械对象不变。
+先完成布局和逐电源脚供电/回地审查，再布线；按 PCB-V07 留下当前修订证据。
+```
+
+项目 `AGENTS.md` 可加入：
+
+```text
+原理图或 PCB 任务使用 embedded-hardware-design；按任务读取 SCH/PCB 细则，
+遵循项目约束，记录适用规则版本和核验证据。
+```
+
+### 3. 以证据完成验收
+
+```mermaid
+flowchart LR
+  A[读取工程与约束] --> B[布局与关键回路]
+  B --> C[布局阶段门槛]
+  C --> D[关键及普通布线]
+  D --> E[铺铜与 GND 收尾]
+  E --> F[DRC · 适用泪滴 · 重铺铜 · DRC]
+  F --> G[最终门槛与生产文件检查]
+```
+
+```powershell
+python scripts/check_pcb_stage.py review.json --pcb current.epcb --stage layout
+python scripts/check_pcb_stage.py review.json --pcb current.epcb --stage final
+```
+
+记录格式见 [阶段模板](assets/PCB_STAGE_REVIEW.json)。检查器验证覆盖、阶段和证据文件哈希；几何、电气、原生 DRC 与人工判断仍须真实执行。历史结论只对应其原有修订。
+
+## 规则与模板导航
+
+| 我现在需要…… | 阅读或复用 |
+| --- | --- |
+| 了解 Skill 的执行入口 | [SKILL.md](SKILL.md) |
+| 绘制/整理原理图 | [排版规则](references/schematic-style.md) · [检查清单](assets/SCHEMATIC_REVIEW.md) |
+| 借鉴工程版式、处理规则冲突 | [样本方法与取舍](references/schematic-examples.md) |
+| 使用嘉立创原理图自动化 | [SCH-28～34 与 API 工作方式](references/easyeda-schematic.md) |
+| 配置新项目并记录例外 | [项目规则模板](assets/PROJECT_RULES.md) |
+| 完成核验与交付 | [核验与证据](references/verification.md) · [阶段审查](references/pcb-stage-review.md) |
+| 查明来源与适用边界 | [来源表](references/sources.md) · [来源指纹](provenance.json) |
+| 安装 Ponytail / mattpocock-skills | [可选插件](OPTIONAL_PLUGINS.md) |
+
+规则区分电气原则、用户偏好、项目参数和待验证建议。例如，去耦电容通常并联，物理上的“大到小”排列须服从准确器件要求、低电感回路与稳定性；100 nF 或 20 mil 不是所有设计的通用答案。
+
+## 工具兼容与边界
+
+| 环境 | 用法 |
+| --- | --- |
+| Codex / 支持 Skill 的宿主 | 安装完整目录，显式调用或由宿主按任务选用 |
+| 普通 ChatGPT / 项目知识文件 | 上传合并规则与项目资料；读取规则不等于模型永久训练 |
+| 嘉立创 EDA 专业版 | 配合另行安装、连接的 `easyeda-api` 等工具 |
+| 其他 EDA | 复用设计原则，使用该工具支持的原生编辑与核验方式 |
+
+Ponytail 与 mattpocock-skills 是可选工作方式插件。上游原理图增强 Skill 的已审阅方法及修正见 [集成说明](references/easyeda-schematic.md)；安装本规则包不自动安装其他插件，也不附带用户工程。
+
+## 参与与维护
+
+- **报告问题 / 提议规则：** 使用 [Issue 模板](https://github.com/mengqy2022/embedded-hardware-design-skill/issues/new/choose)，附准确来源、适用范围与最小证据。
+- **贡献内容：** 见 [贡献指南](https://github.com/mengqy2022/embedded-hardware-design-skill/blob/main/CONTRIBUTING.md)，保留 SCH/PCB 编号及来源归属。
+- **发布维护：** [发布流程](https://github.com/mengqy2022/embedded-hardware-design-skill/blob/main/docs/RELEASING.md) 使用变更记录生成双语首页摘要，并在 CI 核对版本、链接、测试和包哈希。
+- **敏感信息：** 按 [安全说明](https://github.com/mengqy2022/embedded-hardware-design-skill/blob/main/SECURITY.md) 处理；公开内容只保留可复用方法。
+
+## 许可与致谢
+
+文档与原创辅助代码采用 [CC BY-SA 4.0](LICENSE)。[来源表](references/sources.md) 保留作者、链接及适用边界；SparkFun Electronics / jimblom 等来源的归属继续保留。厂商文档、第三方插件和原始工程遵循各自许可，不随本包重新授权。

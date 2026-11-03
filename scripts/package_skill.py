@@ -9,7 +9,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_FILES = {
     "SKILL.md", "README.md", "OPTIONAL_PLUGINS.md", "CHANGELOG.md",
-    "LICENSE", ".gitignore", ".gitattributes", "provenance.json",
+    "LICENSE", ".gitignore", ".gitattributes", "provenance.json", "README.en.md",
 }
 RESOURCE_FILES = {
     "agents/openai.yaml", "assets/PROJECT_RULES.md", "assets/SCHEMATIC_REVIEW.md",
@@ -18,6 +18,7 @@ RESOURCE_FILES = {
     "references/differential-crystal.md", "references/verification.md",
     "references/sources.md", "references/pcb-stage-review.md", "assets/PCB_STAGE_REVIEW.json",
     "scripts/package_skill.py", "scripts/check_pcb_stage.py", "scripts/test_pcb_stage.py",
+    "assets/cover.svg", "docs/INSTALLATION.md",
 }
 EXPECTED = ROOT_FILES | RESOURCE_FILES
 MANIFEST = ROOT / "release.json"

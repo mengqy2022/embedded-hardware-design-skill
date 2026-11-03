@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Checks (${{ matrix.os }}, Python ${{ matrix.python }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.10'
+          - os: windows-latest
+            python: '3.13'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test helper behavior
+        run: python -m unittest discover -s scripts -p "test_*.py"
+      - name: Check documentation and versions
+        run: python scripts/verify_repository.py
+      - name: Check release summary freshness
+        run: python scripts/update_release_docs.py --check
+      - name: Check reviewed package hashes
+        run: python scripts/package_skill.py --verify
+      - name: Check whitespace
+        run: git diff --check
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Build matching tagged release
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_OUTPUT: ${{ runner.temp }}/embedded-hardware-design-release
+        run: python scripts/build_release.py --tag "$RELEASE_TAG" --output "$RELEASE_OUTPUT"
+      - name: Publish release and checksummed assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_OUTPUT: ${{ runner.temp }}/embedded-hardware-design-release
+        run: >-
+          gh release create "$RELEASE_TAG"
+          --verify-tag
+          --title "Embedded Hardware Design $RELEASE_TAG"
+          --notes-file "$RELEASE_OUTPUT/RELEASE_NOTES.md"
+          "$RELEASE_OUTPUT/embedded-hardware-design.zip"
+          "$RELEASE_OUTPUT/embedded-hardware-design-"*.zip
+          "$RELEASE_OUTPUT/HARDWARE_DESIGN_RULES_CHATGPT.md"
+          "$RELEASE_OUTPUT/SHA256SUMS.txt"

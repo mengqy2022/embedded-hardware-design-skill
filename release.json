@@ -1,19 +1,22 @@
 {
   "name": "embedded-hardware-design",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "sha256": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     ".gitignore": "d85e869880ce59f80b6ff556112ef93ea215e5966f8a1633cbaac84b28e26889",
-    "CHANGELOG.md": "1f617575253cc8ba28de5f1cab1782a9b2d98595d08c876da38f16dd796b24e8",
+    "CHANGELOG.md": "06ba273e81cafa2a4e0130fe2436fef1c20d48d3834cd231225989046ab88d32",
     "LICENSE": "5b3fc7598797710cfeecc9a9eb592907b62d831048f3eadd1db84ef37cdeb3ea",
     "OPTIONAL_PLUGINS.md": "6a3ad9eeb6c2f49e6f718c12a634434bfb07afa51dabed504debd2f8a77ff067",
-    "README.md": "1c32db1cbe2c257fb7f4cb79c64825efa67666ef4e3d633ae838d82b7e56d0ec",
+    "README.en.md": "4a647beb70a063caf5782132db181cefc2493ae2fea695d9721905927a9de87d",
+    "README.md": "f8d1ff4e3af6ae719b6eca8e4875de6a0eb53444f6ae0342a7d49df138ce9a85",
     "SKILL.md": "46cebdbde4104d924fce25191a9231518cdac0b362fc443fa56592b12deb8be2",
     "agents/openai.yaml": "5d29e59ba1649a81c1c4232d404473f0db215649349b6fabe24d7d1879bcaa5d",
     "assets/PCB_STAGE_REVIEW.json": "189e1394151e052c356c83f79d586cdc0cf6dc9eb360d4dfb87a50160d659e65",
     "assets/PROJECT_RULES.md": "0454345b1e7422c7861173bc6bf05d2531b3149413153c72098a689d55e3ee02",
     "assets/SCHEMATIC_REVIEW.md": "5ad67c5046c4a6b85204014e83cd56d55605a04eab65a26e60400abb10a42292",
-    "provenance.json": "86be874eb0b754e17708ea6277b432bf8794d710bc94a9e8a78a7c03bce8b7a1",
+    "assets/cover.svg": "538503ff4061f163a7817207509ba75e1128e0364cff5f59b87e6c3fb22d48ad",
+    "docs/INSTALLATION.md": "7bf9ebd6dffde7ba75b22493c12dd2c923343619ee692c39fcd812954f4e6416",
+    "provenance.json": "9ececb97fc0a05d4ada4402253362c2039ef7b8e9dcb790d813d3e389b573389",
     "references/differential-crystal.md": "ce3b3a8a4aa8ccd7005ac518ee44843467d9b770e573f8abb973ddd7e802533b",
     "references/easyeda-schematic.md": "a54193505b1e8fa623029d63ae6d68e4f4c90f64e379047c89639307858d5869",
     "references/layout-manufacturing.md": "ec98c75d4ecb9aae2d051801d3164cfa269e285491d97d6bfc79943a179a03d2",
@@ -24,7 +27,7 @@
     "references/sources.md": "3b14793874e5e44e4b63d23b0055eb250740cb806c75b8403bb1c69a46124c95",
     "references/verification.md": "58cbbc58b5b3dcebd9904ceed1be695398ea482f09d76f7002f4d4c6943a7d9f",
     "scripts/check_pcb_stage.py": "2bf3bb69a441de637d9a64051670e300243260d4dc108e1ff0e123a2e7ad01b0",
-    "scripts/package_skill.py": "2eb1b1018325e03d6f4abad8195d24b986d953157c14af39e93ac09a045acb01",
+    "scripts/package_skill.py": "7d378ace3291e40a5467dd4505b7128085ff2c29b61dd6e997ab7b2ef1ce3411",
     "scripts/test_pcb_stage.py": "51f789fa7788e2bd343d5cad4c43b63910f5b1d62afc2385bcf0247c3ff4362e"
   }
 }

@@ -1,0 +1,25 @@
+name: 规则建议 / Rule proposal
+description: 提出有来源、适用边界和核验方法的硬件设计规则。
+title: "[Rule] "
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议与适用范围 / Proposal and scope
+      description: 规则编号、需要解决的问题；区分通用原则、偏好和具体项目参数。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 依据与冲突分析 / Sources and conflicts
+      description: 优先原厂/官方资料，注明版本和页码。若与现有规则不同，请说明条件和取舍。
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: 如何核验 / Verification
+      description: 可观察的验收方法，已执行和待验证的部分分别说明。
+    validations:
+      required: true

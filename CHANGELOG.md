@@ -1,5 +1,19 @@
 # 变更记录
 
+## 2.3.1 — 2026-11-03
+
+- 重做中英文 README：增加原创封面、最新版本摘要、规则导航、安装升级入口和工具适用边界，修正首页版本滞后。
+- 新增贡献指南、问题/规则建议与 PR 模板、安装及发布文档，延续现有来源归属与 CC BY-SA 4.0 许可。
+- 从版本元数据和 CHANGELOG 自动生成双语首页摘要与 Release 说明；CI 检查版本、链接、包指纹和辅助脚本，并在匹配标签时构建发布附件及 SHA-256 校验文件。
+- 设计规则与 PCB-V07 行为沿用 2.3.0，本版聚焦文档和发布维护，不代表任何板卡新增验证通过。
+
+### English
+
+- Redesigned both READMEs with an original cover, current release highlights, rule navigation, and clear installation and tool boundaries.
+- Added contribution guidance, issue/PR templates, installation and release documentation, preserving attribution and CC BY-SA 4.0.
+- Generate README summaries and release notes from version metadata and this changelog; CI checks consistency, links, package hashes, and helper tests, then builds checksummed assets for matching tags.
+- Design rules and PCB-V07 behavior remain those of 2.3.0; this documentation and maintenance release does not revalidate any board.
+
 ## 2.3.0 — 2026-11-03
 
 - 新增PCB-V07：大规模布线前和交付前分阶段检查，全器件装配及逐电源脚去耦/完整回地均须留证，不用DRC或文档编号检查替代。

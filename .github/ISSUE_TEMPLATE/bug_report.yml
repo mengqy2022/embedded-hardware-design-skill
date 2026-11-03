@@ -1,0 +1,25 @@
+name: 问题反馈 / Bug report
+description: 报告规则、文档或辅助脚本的可复现问题。
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 版本与环境 / Version and environment
+      description: Release/commit、宿主/EDA 版本、操作系统；脚本问题请注明 Python 版本。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题与预期 / Problem and expected behavior
+      description: 涉及的文件或规则编号、实际行为及合理的预期。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 复现与证据 / Reproduction and evidence
+      description: 最小步骤、去标识日志、准确资料链接及版本/页码。请移除私人工程、凭据和受限资料。
+    validations:
+      required: true
