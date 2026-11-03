@@ -23,13 +23,13 @@
 
 ## 在 Codex 中安装或迁移
 
-[GitHub 仓库](https://github.com/mengqy2022/embedded-hardware-design-skill) · [v2.2.0 发布与附件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.2.0)
+[GitHub 仓库](https://github.com/mengqy2022/embedded-hardware-design-skill) · [v2.3.0 发布与附件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.0)
 
-下载发布附件 `embedded-hardware-design-2.2.0.zip`。ZIP 内只有一个 `embedded-hardware-design/` 目录，不包含 `.git`。Windows PowerShell 首次安装示例：
+下载发布附件 `embedded-hardware-design-2.3.0.zip`。ZIP 内只有一个 `embedded-hardware-design/` 目录，不包含 `.git`。Windows PowerShell 首次安装示例：
 
 ```powershell
-$skillZip = Join-Path $env:TEMP 'embedded-hardware-design-2.2.0.zip'
-Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/download/v2.2.0/embedded-hardware-design-2.2.0.zip' -OutFile $skillZip
+$skillZip = Join-Path $env:TEMP 'embedded-hardware-design-2.3.0.zip'
+Invoke-WebRequest 'https://github.com/mengqy2022/embedded-hardware-design-skill/releases/download/v2.3.0/embedded-hardware-design-2.3.0.zip' -OutFile $skillZip
 Expand-Archive -LiteralPath $skillZip -DestinationPath "$env:USERPROFILE/.codex/skills"
 ```
 
@@ -72,12 +72,14 @@ Expand-Archive -LiteralPath $skillZip -DestinationPath "$env:USERPROFILE/.codex/
 
 ## 维护与发布
 
+当前维护版2.3.0增加[PCB-V07阶段门槛](references/pcb-stage-review.md)：大规模布线前及交付前，按[记录模板](assets/PCB_STAGE_REVIEW.json)检查全器件装配、逐电源脚供电/完整回地与适用规则。运行 `python scripts/check_pcb_stage.py <阶段记录.json> --pcb <当前导出.epcb> --stage final`（布局阶段改为layout）；缺项、失败或证据哈希过期时返回非零。它检查记录覆盖和版本，不运行EDA或证明电气性能。可复用现有核验报告，无需重复全文读取。
+
 本仓库是可携带规则的维护源，安装目录为部署副本。更新时同步相关工作区/项目规则，保留 SCH/PCB 编号、来源和适用边界，记录 [CHANGELOG](CHANGELOG.md) 与 [来源指纹](provenance.json)。新项目记录实际使用版本和提交；历史通过结论只对应历史修订。
 
 Python 3.10+，仅使用标准库：
 
 ```powershell
-python scripts/package_skill.py --refresh --output ../embedded-hardware-design-2.2.0.zip --chatgpt-output ../HARDWARE_DESIGN_RULES_CHATGPT.md
+python scripts/package_skill.py --refresh --output ../embedded-hardware-design-2.3.0.zip --chatgpt-output ../HARDWARE_DESIGN_RULES_CHATGPT.md
 python scripts/package_skill.py --verify
 ```
 

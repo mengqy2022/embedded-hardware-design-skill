@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project": "",
+  "revision": "",
+  "stage": "final",
+  "artifacts": {
+    "pcb": {"path": "", "sha256": ""},
+    "inventory": {"path": "", "sha256": ""},
+    "review_report": {"path": "", "sha256": ""}
+  },
+  "checks": {
+    "INVENTORY": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-P01": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-V04": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-L01/L17/L20": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-L18": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-R18": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "NETLIST": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "CONNECTIVITY": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "DRC": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-G06/G08": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-R07": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-R11/R12": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-P09": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-R14/R17": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-L21": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-V02": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "PCB-V06": {"status": "not_checked", "evidence": [], "rationale": ""},
+    "FAB": {"status": "not_checked", "evidence": [], "rationale": ""}
+  },
+  "components": {},
+  "power_pins": {}
+}

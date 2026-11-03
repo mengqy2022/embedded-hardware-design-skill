@@ -11,14 +11,14 @@ description: 嵌入式原理图绘制、排版、电气审查与 PCB 布局布�
 
 1. 读取项目说明、当前图页/PCB、规则和核验报告，确认工程身份、修订及允许修改的范围。记录锁定机械条件和用户已完成部分；用户手动接管后先重读现状，不重放旧补丁。
 2. 原理图任务先读取下方原理图规范，以当前器件本体为起点组织符号、引脚和导线。区分排版变化与电气变化；纯排版保持网表，纯 PCB 任务保持原理图功能及网络。授权的电气变化同步原理图、PCB、BOM 和验证记录。
-3. PCB 任务先确认机械、实际叠层/原生层类型、回流和关键通道，完成布局后展开布线。先处理受约束网络及非 GND 飞线，再按 PCB-G08 铺铜/缝合/检查 GND；主要布线后做必要等长；首次完整 DRC 零错误后按 PCB-V06 设计适用泪滴、重铺铜、完整复查至零错误再导出。项目参数填入现有规则或项目配置模板。
+3. PCB 任务先确认机械、实际叠层/原生层类型、回流和关键通道，完成布局后展开布线。开始大规模布线和最终交付前均执行 [PCB-V07阶段门槛](references/pcb-stage-review.md)：全器件装配空间、逐电源脚供电/回地及适用规则须有当前修订证据，缺项或过期不得通过。先处理受约束网络及非 GND 飞线，再按 PCB-G08 铺铜/缝合/检查 GND；主要布线后做必要等长；首次完整 DRC 零错误后按 PCB-V06 设计适用泪滴、重铺铜、完整复查至零错误再导出。项目参数填入现有规则或项目配置模板。
 4. 修改前保留回退点；修改后读回对象和网表，只复查受影响部分，阶段交付完成适用的全量核验。原理图视觉检查、电气检查、PCB DRC 和制造检查分别记录。
 
 ## 按任务读取
 
 - **绘制、整理或审查原理图**：必读 [原理图排版 SCH-01～27](references/schematic-style.md)；以 [原理图检查清单](assets/SCHEMATIC_REVIEW.md)记录适用检查。嘉立创EDA的网络标签、NC和检查行为以当前版本实际结果为准。
 - **嘉立创原理图实时自动化**：另读 [API 工作方式与上游取舍](references/easyeda-schematic.md)，执行 SCH-28～34；工具接口查当前已安装 `easyeda-api` 文档。
-- **PCB 布局、封装、机械或丝印**：读 [布局与制造](references/layout-manufacturing.md)，参数记录在 [项目配置模板](assets/PROJECT_RULES.md)或现有项目规则中。
+- **PCB 布局布线**：必读 [布局与制造](references/layout-manufacturing.md)及[电源与接地](references/power-ground.md)；按[阶段门槛](references/pcb-stage-review.md)核验，参数记录在[项目配置模板](assets/PROJECT_RULES.md)或现有项目规则中。
 - **电源、GND 或去耦**：读 [电源与接地](references/power-ground.md)。区分原理图并联拓扑、PCB 低电感回路与布局偏好。
 - **差分线、等长或晶振**：读 [差分与晶振](references/differential-crystal.md)。
 - **核验与交付**：读 [核验与证据](references/verification.md)。

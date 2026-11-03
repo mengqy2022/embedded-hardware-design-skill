@@ -16,7 +16,8 @@ RESOURCE_FILES = {
     "references/schematic-style.md", "references/schematic-examples.md", "references/easyeda-schematic.md",
     "references/layout-manufacturing.md", "references/power-ground.md",
     "references/differential-crystal.md", "references/verification.md",
-    "references/sources.md", "scripts/package_skill.py",
+    "references/sources.md", "references/pcb-stage-review.md", "assets/PCB_STAGE_REVIEW.json",
+    "scripts/package_skill.py", "scripts/check_pcb_stage.py", "scripts/test_pcb_stage.py",
 }
 EXPECTED = ROOT_FILES | RESOURCE_FILES
 MANIFEST = ROOT / "release.json"
@@ -64,7 +65,7 @@ def main():
                 archive.write(ROOT / rel, "embedded-hardware-design/" + rel)
     if args.chatgpt_output:
         sections = ["SKILL.md", "references/schematic-style.md", "references/schematic-examples.md", "references/easyeda-schematic.md", "assets/SCHEMATIC_REVIEW.md", "references/layout-manufacturing.md", "references/power-ground.md",
-                    "references/differential-crystal.md", "references/verification.md",
+                    "references/differential-crystal.md", "references/verification.md", "references/pcb-stage-review.md",
                     "references/sources.md", "assets/PROJECT_RULES.md"]
         parts = [f"# 嵌入式原理图与 PCB 可携带规则 {manifest['version']}\n\n"
                  "供上传聊天或项目知识文件。按当前项目任务读取适用部分；本文件不提供EDA控制能力。"

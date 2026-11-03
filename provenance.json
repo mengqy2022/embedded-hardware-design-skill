@@ -1,16 +1,16 @@
 {
-  "version": "2.2.3",
+  "version": "2.3.0",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "d996a857dc601699161e400129167ba1743be2c56cb67b6a931a10c8289b1888"
+      "sha256": "caecd05e46cf45d9c8cb4f9d797d833acc338e94c30d99d20f677738bd25c704"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "e709c6834c39a37fab00f79bf62eca2fd11bfffa29a99b621eeb986894495b23"
+      "sha256": "c861df51217f80624dedec19dbb25319d77339882e504f6896067d01fb31a70d"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "3fcbfd01da420a16eeef2f568ea3221095b10c70760e45cfd4aa17f7fc2a917c"
+      "sha256": "07c137999532847bb708d0201237134a7c51ef9d27f47d58ffa3b7167328754c"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -30,11 +30,11 @@
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
-      "sha256": "396000f6b001f0d3c7c7d50de17b750c44cc3fe29bb272142f56279101d48094"
+      "sha256": "b47d9fe8261720496c5a620908967e40841928f42883925137ce3a608841b333"
     },
     {
       "path": "engineering/tools/check_pcb_rule_gate.py",
-      "sha256": "d91215a316aeee514800a122ce1feca08177083b5f2838740cc4fb924877f7ed"
+      "sha256": "d85f3a3961d1f1054a66cc95b0f31719d90f8c4dcb08d964caa9780adf24bade"
     },
     {
       "path": "engineering/standards/SCHEMATIC_STYLE.md",
@@ -55,6 +55,18 @@
     {
       "path": "engineering/notes/SCHEMATIC_LARGE_BOARD_SAMPLES_20261102.md",
       "sha256": "d8854eb630eb7e52ce9f91c9447fa1f7ff549bb464e7673733f821a65024642e"
+    },
+    {
+      "path": "engineering/standards/PCB_STAGE_REVIEW.md",
+      "sha256": "e59c87f15a04cb6ffa481c2ae7975559302960abd1ecb049e2213737601c1896"
+    },
+    {
+      "path": "engineering/PROJECT_TEMPLATE/PCB_STAGE_REVIEW.json",
+      "sha256": "189e1394151e052c356c83f79d586cdc0cf6dc9eb360d4dfb87a50160d659e65"
+    },
+    {
+      "path": "engineering/tools/check_pcb_stage.py",
+      "sha256": "2bf3bb69a441de637d9a64051670e300243260d4dc108e1ff0e123a2e7ad01b0"
     }
   ],
   "updated": "2026-11-03",
@@ -100,5 +112,11 @@
       "PCB-L20"
     ],
     "source": "User feedback and PCB copper-path/assembly review; geometric evidence does not prove measured performance"
+  },
+  "pcb_stage_review": {
+    "date": "2026-11-03",
+    "rule": "PCB-V07",
+    "source": "User feedback about rules not enforced during first layout",
+    "scope": "Review coverage and evidence freshness gates, not automated electrical validation"
   }
 }
