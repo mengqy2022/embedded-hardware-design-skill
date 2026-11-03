@@ -1,16 +1,16 @@
 {
-  "version": "2.2.1",
+  "version": "2.2.2",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "58d293490389e4532cb3698a6cca1ec3cacd4fba6de270c730513d31c715b2cb"
+      "sha256": "d996a857dc601699161e400129167ba1743be2c56cb67b6a931a10c8289b1888"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "466305440709085c1a461bb18db1f223e3b9716c947daf7e219897404c319cf8"
+      "sha256": "4854b65fbf50d2495e67d9c01ed81e90dafe58a668eda08d24a7f5a9a5ff89f3"
     },
     {
       "path": "engineering/standards/SOURCES.md",
@@ -30,7 +30,7 @@
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
-      "sha256": "873fd9ecb086b41d8c9171ad114a4522caa62529a1504d4bcaec732d4c5d24fc"
+      "sha256": "396000f6b001f0d3c7c7d50de17b750c44cc3fe29bb272142f56279101d48094"
     },
     {
       "path": "engineering/tools/check_pcb_rule_gate.py",
@@ -57,7 +57,7 @@
       "sha256": "d8854eb630eb7e52ce9f91c9447fa1f7ff549bb464e7673733f821a65024642e"
     }
   ],
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "name": "embedded-hardware-design",
   "previous_name": "pcb-design-rules",
   "upstream_skills": [
