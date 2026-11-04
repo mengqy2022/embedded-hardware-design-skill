@@ -1,5 +1,17 @@
 # 变更记录
 
+## 2.3.2 — 2026-11-04
+
+- 新增PCB-L22：MLCC封装与有效电容选型；不将0201/0402/0603/0805绑定固定容值上限，也不把经验范围当合格保证。
+- 按准确MPN、实际偏压/温度/容差/老化核对有效容量、额定电压及ESR/稳定性；新增Murata与ADI原厂依据，区分典型曲线和保证下限。
+- 将选型证据接入电源/去耦、阶段核验及项目/BOM审查入口；同步双语首页与发布说明。未改动既有EDA工程，历史板级验证不追溯升级。
+
+### English
+
+- Added PCB-L22 for MLCC package and effective-capacitance selection; package sizes do not impose universal capacitance ceilings or define a safe selection window.
+- Check exact-part DC bias, temperature, tolerance and aging against required capacitance, voltage ratings and ESR/stability; cite Murata and ADI and distinguish typical curves from guaranteed limits.
+- Route this evidence into power/decoupling, stage reviews and project/BOM checks; refresh bilingual release summaries. No EDA designs were edited or retroactively revalidated.
+
 ## 2.3.1 — 2026-11-03
 
 - 重做中英文 README：增加原创封面、最新版本摘要、规则导航、安装升级入口和工具适用边界，修正首页版本滞后。

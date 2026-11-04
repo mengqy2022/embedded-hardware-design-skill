@@ -20,14 +20,13 @@
 ## 最新进展
 
 <!-- release:start -->
-**[v2.3.1](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1) · 2026-11-03**
+**[v2.3.2](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2) · 2026-11-04**
 
-- 重做中英文 README：增加原创封面、最新版本摘要、规则导航、安装升级入口和工具适用边界，修正首页版本滞后。
-- 新增贡献指南、问题/规则建议与 PR 模板、安装及发布文档，延续现有来源归属与 CC BY-SA 4.0 许可。
-- 从版本元数据和 CHANGELOG 自动生成双语首页摘要与 Release 说明；CI 检查版本、链接、包指纹和辅助脚本，并在匹配标签时构建发布附件及 SHA-256 校验文件。
-- 设计规则与 PCB-V07 行为沿用 2.3.0，本版聚焦文档和发布维护，不代表任何板卡新增验证通过。
+- 新增PCB-L22：MLCC封装与有效电容选型；不将0201/0402/0603/0805绑定固定容值上限，也不把经验范围当合格保证。
+- 按准确MPN、实际偏压/温度/容差/老化核对有效容量、额定电压及ESR/稳定性；新增Murata与ADI原厂依据，区分典型曲线和保证下限。
+- 将选型证据接入电源/去耦、阶段核验及项目/BOM审查入口；同步双语首页与发布说明。未改动既有EDA工程，历史板级验证不追溯升级。
 
-[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1)
+[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2)
 <!-- release:end -->
 
 ## 能解决什么

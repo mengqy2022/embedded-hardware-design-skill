@@ -1,24 +1,24 @@
 {
-  "version": "2.3.1",
+  "version": "2.3.2",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "caecd05e46cf45d9c8cb4f9d797d833acc338e94c30d99d20f677738bd25c704"
+      "sha256": "fb2754dc635f34539a111c718523db998c7fe5bee6b3bea98184b23e51eb3534"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
-      "sha256": "c861df51217f80624dedec19dbb25319d77339882e504f6896067d01fb31a70d"
+      "sha256": "87633fdd7a8696edb81ea92c40b4ca10fcdca7aa04aaccb604338a61ac3f6bab"
     },
     {
       "path": "engineering/standards/SOURCES.md",
-      "sha256": "9c510955a6a771a333544bdf7d2df644780e66eebcbdb0f91c29f2f98bc3c4c8"
+      "sha256": "d3b8cdd24c1571067773cf034bc9ca54cca913e95b1efd5bfc6bb0fa887b4156"
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "07c137999532847bb708d0201237134a7c51ef9d27f47d58ffa3b7167328754c"
+      "sha256": "4caf0669539d4ef3433dcf947ef52dfc6dda45ad6b50e964743c63fd2b51666d"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -30,7 +30,7 @@
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
-      "sha256": "b47d9fe8261720496c5a620908967e40841928f42883925137ce3a608841b333"
+      "sha256": "6ada6a932999b2d1842cb38a020fec081a40b7c22ad87872684fc7fa0004daaf"
     },
     {
       "path": "engineering/tools/check_pcb_rule_gate.py",
@@ -58,7 +58,7 @@
     },
     {
       "path": "engineering/standards/PCB_STAGE_REVIEW.md",
-      "sha256": "e59c87f15a04cb6ffa481c2ae7975559302960abd1ecb049e2213737601c1896"
+      "sha256": "d0395a25628a4b524d0fca5ce3e4d4c3d3847d1eca66a27177f573b00c360aea"
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_STAGE_REVIEW.json",
@@ -67,9 +67,13 @@
     {
       "path": "engineering/tools/check_pcb_stage.py",
       "sha256": "2bf3bb69a441de637d9a64051670e300243260d4dc108e1ff0e123a2e7ad01b0"
+    },
+    {
+      "path": "engineering/notes/MLCC_PACKAGE_EFFECTIVE_CAPACITANCE_20261104.md",
+      "sha256": "b8973792884d4e70608c36a1dc9cd4f0894128c1bbc2b0a4b52df571af3ed9fa"
     }
   ],
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "name": "embedded-hardware-design",
   "previous_name": "pcb-design-rules",
   "upstream_skills": [
@@ -118,5 +122,14 @@
     "rule": "PCB-V07",
     "source": "User feedback about rules not enforced during first layout",
     "scope": "Review coverage and evidence freshness gates, not automated electrical validation"
+  },
+  "mlcc_effective_capacitance": {
+    "date": "2026-11-04",
+    "rule": "PCB-L22",
+    "sources": [
+      "Murata ceramic capacitor FAQ char/0005, main text and first DC-bias figure",
+      "ADI/Maxim technical article 2012-12-04, text/Figure1/Table2"
+    ],
+    "scope": "No universal package-capacitance ceilings; exact-MPN effective capacitance under actual conditions. No board edits or retroactive component validation."
   }
 }

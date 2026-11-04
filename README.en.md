@@ -20,14 +20,13 @@ Portable rules, review templates, and evidence gates for AI-assisted embedded ha
 ## Latest release
 
 <!-- release:start -->
-**[v2.3.1](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1) · 2026-11-03**
+**[v2.3.2](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2) · 2026-11-04**
 
-- Redesigned both READMEs with an original cover, current release highlights, rule navigation, and clear installation and tool boundaries.
-- Added contribution guidance, issue/PR templates, installation and release documentation, preserving attribution and CC BY-SA 4.0.
-- Generate README summaries and release notes from version metadata and this changelog; CI checks consistency, links, package hashes, and helper tests, then builds checksummed assets for matching tags.
-- Design rules and PCB-V07 behavior remain those of 2.3.0; this documentation and maintenance release does not revalidate any board.
+- Added PCB-L22 for MLCC package and effective-capacitance selection; package sizes do not impose universal capacitance ceilings or define a safe selection window.
+- Check exact-part DC bias, temperature, tolerance and aging against required capacitance, voltage ratings and ESR/stability; cite Murata and ADI and distinguish typical curves from guaranteed limits.
+- Route this evidence into power/decoupling, stage reviews and project/BOM checks; refresh bilingual release summaries. No EDA designs were edited or retroactively revalidated.
 
-[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.1)
+[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2)
 <!-- release:end -->
 
 ## What this provides
