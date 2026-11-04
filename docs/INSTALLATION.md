@@ -59,6 +59,14 @@ python "$env:USERPROFILE/.codex/skills/embedded-hardware-design/scripts/package_
 
 另一台电脑安装相同 Release，并复制自己的项目说明、设计规则和必要工程资料；记录固定版本以便复现。仓库不会自动同步私人项目或 EDA 状态。
 
+要在某工作区持续采用此方法，将下面一行加入该工作区的`AGENTS.md`（已有同义约定就合并）：
+
+```text
+原理图或PCB任务使用 embedded-hardware-design；新板、电气功能或接口变更先读其 references/design-workflow.md（HW-01～07），复用项目记录关联需求、依据与验收。纯排版/局部修复只复查受影响项，实测未完成时保持未验证。
+```
+
+保留默认自动发现配置；新会话确认Skill可见，必要时显式调用`$embedded-hardware-design`。工作区约定提供持续入口，阶段证据用于核验执行，二者都不保证工具或实物结果必然通过。
+
 普通 ChatGPT 上传 `HARDWARE_DESIGN_RULES_CHATGPT.md`。若支持项目知识文件，可加入项目，并设置：
 
 ```text

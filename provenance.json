@@ -1,12 +1,12 @@
 {
-  "version": "2.3.2",
+  "version": "2.4.0",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
   "source_inputs": [
     {
       "path": "engineering/standards/PCB_RULE_PROFILE.md",
-      "sha256": "fb2754dc635f34539a111c718523db998c7fe5bee6b3bea98184b23e51eb3534"
+      "sha256": "7d3ce8e81dfa06652abfb62a5200c3e59d6e55c81d5f00fa439913d6402f7466"
     },
     {
       "path": "engineering/standards/PCB_LAYOUT_ROUTING.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "4caf0669539d4ef3433dcf947ef52dfc6dda45ad6b50e964743c63fd2b51666d"
+      "sha256": "b72b0407dccd1333f88ca15a20a863dba7238fdd5d91b4b57a861816241a3c48"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -30,19 +30,19 @@
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_REVIEW.md",
-      "sha256": "6ada6a932999b2d1842cb38a020fec081a40b7c22ad87872684fc7fa0004daaf"
+      "sha256": "d670c2bebccdf62d7b36339fb3c2e70cfc9cca87c007a7f74c2d06e59ac599bb"
     },
     {
       "path": "engineering/tools/check_pcb_rule_gate.py",
-      "sha256": "d85f3a3961d1f1054a66cc95b0f31719d90f8c4dcb08d964caa9780adf24bade"
+      "sha256": "505a44dc22e4819841797d1ebe3f19815b0f2e02a8bb3ed821b1ecbcb710a7fd"
     },
     {
       "path": "engineering/standards/SCHEMATIC_STYLE.md",
-      "sha256": "265ee1db6939ff8f03ab31cea04af2e909d66c6a97f4d4fa20433ad3372c058e"
+      "sha256": "4bfe6702a57907309376fd066f3c751e4af73e6e49d1cc1e7e4eeba0ec0224af"
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/SCHEMATIC_REVIEW.md",
-      "sha256": "0f1982398347b408ac5e4523b73b4f244ec684c615e93b82eeba13ba1b656ae7"
+      "sha256": "26d4bac3ac835bb2af6aed59b330b24377ed38e728200bcb975b22c23dadc0e7"
     },
     {
       "path": "engineering/notes/SCHEMATIC_EXAMPLE_STUDY_20261102.md",
@@ -58,7 +58,7 @@
     },
     {
       "path": "engineering/standards/PCB_STAGE_REVIEW.md",
-      "sha256": "d0395a25628a4b524d0fca5ce3e4d4c3d3847d1eca66a27177f573b00c360aea"
+      "sha256": "bc15660010f4873419b7e0653c15250649c73a0f8bb49d63d03f5a568df3e529"
     },
     {
       "path": "engineering/PROJECT_TEMPLATE/PCB_STAGE_REVIEW.json",
@@ -71,6 +71,14 @@
     {
       "path": "engineering/notes/MLCC_PACKAGE_EFFECTIVE_CAPACITANCE_20261104.md",
       "sha256": "b8973792884d4e70608c36a1dc9cd4f0894128c1bbc2b0a4b52df571af3ed9fa"
+    },
+    {
+      "path": "engineering/standards/HARDWARE_DESIGN_WORKFLOW.md",
+      "sha256": "dbb015d29c4d60e00c06d10d49783cd6f29a9c9ac2846299f24a1556e231c1cc"
+    },
+    {
+      "path": "engineering/PROJECT_TEMPLATE/DESIGN_EVIDENCE.md",
+      "sha256": "3502e352d5842bf0518de10a20c98f266741215fca2d61b771ab38859bca1282"
     }
   ],
   "updated": "2026-11-04",
@@ -131,5 +139,11 @@
       "ADI/Maxim technical article 2012-12-04, text/Figure1/Table2"
     ],
     "scope": "No universal package-capacitance ceilings; exact-MPN effective capacitance under actual conditions. No board edits or retroactive component validation."
+  },
+  "engineering_workflow": {
+    "date": "2026-11-04",
+    "rules": "HW-01–07",
+    "source": "User adoption of requirements-to-measurement workflow",
+    "scope": "Risk-proportionate requirements/acceptance, interface contracts, calculations, model limits, assembly/test access and prototype feedback. Documentation-only update; no EDA edits or measurements."
   }
 }

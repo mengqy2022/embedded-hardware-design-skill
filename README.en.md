@@ -20,13 +20,13 @@ Portable rules, review templates, and evidence gates for AI-assisted embedded ha
 ## Latest release
 
 <!-- release:start -->
-**[v2.3.2](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2) · 2026-11-04**
+**[v2.4.0](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0) · 2026-11-04**
 
-- Added PCB-L22 for MLCC package and effective-capacitance selection; package sizes do not impose universal capacitance ceilings or define a safe selection window.
-- Check exact-part DC bias, temperature, tolerance and aging against required capacitance, voltage ratings and ESR/stability; cite Murata and ADI and distinguish typical curves from guaranteed limits.
-- Route this evidence into power/decoupling, stage reviews and project/BOM checks; refresh bilingual release summaries. No EDA designs were edited or retroactively revalidated.
+- Added HW-01–07 for measurable requirements, shared interfaces, bounded calculations, risk-based research/simulation, assembly/test access, prototype tests, and feedback.
+- Added a compact evidence template linking requirements, design objects, calculations, models, and measurements; reuse existing records and limit cosmetic/local changes to affected checks.
+- Report design, manufacturing, prototype, and compliance states separately; state model limits and keep unmeasured items unverified. Preserve PCB-V07 and existing rules, refresh bilingual release docs and portable packages; no EDA edits or retroactive board certification.
 
-[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2)
+[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0)
 <!-- release:end -->
 
 ## What this provides
@@ -35,6 +35,7 @@ A reusable workflow for schematic presentation, PCB layout and routing, and deli
 
 | Area | Design focus | Reference |
 | --- | --- | --- |
+| New designs and electrical changes | Measurable acceptance, shared interfaces, calculations, risk-based analysis, prototype feedback | [HW-01–07](references/design-workflow.md) · [Evidence template](assets/DESIGN_EVIDENCE.md) |
 | Schematics | Functional blocks, symbol/pin consistency, clear wiring and labels | [Schematic style](references/schematic-style.md) |
 | Layout | Protected mechanics, assembly access, connector placement, readable silkscreen | [Layout and manufacturing](references/layout-manufacturing.md) |
 | Power and return | Per-pin decoupling, regulator capacitors, low-inductance loops, actual ground copper | [Power and ground](references/power-ground.md) |
@@ -62,6 +63,7 @@ Open a new session and check the skill list. Back up an existing installation be
 ```text
 Use $embedded-hardware-design to improve this schematic and PCB.
 Read the current design, project rules, and verification report first.
+For new designs or electrical/interface changes, use HW-01–07 to link requirements, calculations and acceptance; select simulations by risk and report measurement states separately.
 Keep electrical connectivity unchanged unless explicitly authorized; preserve locked mechanics.
 Complete layout and per-power-pin supply/return review before routing.
 Record evidence for the current revision using PCB-V07.

@@ -1,5 +1,17 @@
 # 变更记录
 
+## 2.4.0 — 2026-11-04
+
+- 新增HW-01～07工程闭环：量化需求/验收、共享接口、计算与边界条件、按风险研究/仿真、装配/测试接入、样机测试及经验反馈。
+- 新增精简设计依据模板，复用已有记录并关联需求、器件/网络、计算、模型与实测证据；新板/电气/接口变更读取，纯排版和局部修复只核验受影响项。
+- 区分设计检查、制造输出、样机和合规结论；仿真记录模型边界，未测项保持未验证。延续PCB-V07及全部既有规则，更新双语首页、安装包和聊天合并规则；未修改EDA或追溯认证旧板。
+
+### English
+
+- Added HW-01–07 for measurable requirements, shared interfaces, bounded calculations, risk-based research/simulation, assembly/test access, prototype tests, and feedback.
+- Added a compact evidence template linking requirements, design objects, calculations, models, and measurements; reuse existing records and limit cosmetic/local changes to affected checks.
+- Report design, manufacturing, prototype, and compliance states separately; state model limits and keep unmeasured items unverified. Preserve PCB-V07 and existing rules, refresh bilingual release docs and portable packages; no EDA edits or retroactive board certification.
+
 ## 2.3.2 — 2026-11-04
 
 - 新增PCB-L22：MLCC封装与有效电容选型；不将0201/0402/0603/0805绑定固定容值上限，也不把经验范围当合格保证。

@@ -20,13 +20,13 @@
 ## 最新进展
 
 <!-- release:start -->
-**[v2.3.2](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2) · 2026-11-04**
+**[v2.4.0](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0) · 2026-11-04**
 
-- 新增PCB-L22：MLCC封装与有效电容选型；不将0201/0402/0603/0805绑定固定容值上限，也不把经验范围当合格保证。
-- 按准确MPN、实际偏压/温度/容差/老化核对有效容量、额定电压及ESR/稳定性；新增Murata与ADI原厂依据，区分典型曲线和保证下限。
-- 将选型证据接入电源/去耦、阶段核验及项目/BOM审查入口；同步双语首页与发布说明。未改动既有EDA工程，历史板级验证不追溯升级。
+- 新增HW-01～07工程闭环：量化需求/验收、共享接口、计算与边界条件、按风险研究/仿真、装配/测试接入、样机测试及经验反馈。
+- 新增精简设计依据模板，复用已有记录并关联需求、器件/网络、计算、模型与实测证据；新板/电气/接口变更读取，纯排版和局部修复只核验受影响项。
+- 区分设计检查、制造输出、样机和合规结论；仿真记录模型边界，未测项保持未验证。延续PCB-V07及全部既有规则，更新双语首页、安装包和聊天合并规则；未修改EDA或追溯认证旧板。
 
-[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.3.2)
+[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0)
 <!-- release:end -->
 
 ## 能解决什么
@@ -35,6 +35,7 @@
 
 | 设计环节 | 关注内容 | 入口 |
 | --- | --- | --- |
+| 新板与电气变更 | 量化需求、共享接口、计算与风险验证、样机反馈 | [HW-01～07](references/design-workflow.md) · [记录模板](assets/DESIGN_EVIDENCE.md) |
 | 原理图 | 功能分区、引脚与符号一致、连线清晰、标签与字体不重叠 | [SCH 规范](references/schematic-style.md) |
 | PCB 布局 | 锁定机械条件、器件装配间距、接口位置、丝印可读性 | [布局与制造](references/layout-manufacturing.md) |
 | 供电与回流 | 逐电源脚去耦、输入/输出电容、低电感回路、真实 GND 铜路 | [电源与接地](references/power-ground.md) |
@@ -66,6 +67,7 @@ Expand-Archive -LiteralPath $skillArchive -DestinationPath "$env:USERPROFILE/.co
 ```text
 使用 $embedded-hardware-design 优化当前原理图与 PCB。
 先读取项目说明、规则和现有核验报告；保持未授权的网络与锁定机械对象不变。
+新板或电气/接口变更按 HW-01～07 关联需求、计算与验收；仿真按风险选择，实测状态单独记录。
 先完成布局和逐电源脚供电/回地审查，再布线；按 PCB-V07 留下当前修订证据。
 ```
 
@@ -99,6 +101,7 @@ python scripts/check_pcb_stage.py review.json --pcb current.epcb --stage final
 
 | 我现在需要…… | 阅读或复用 |
 | --- | --- |
+| 建立需求、计算和样机验证闭环 | [HW-01～07](references/design-workflow.md) · [精简模板](assets/DESIGN_EVIDENCE.md) |
 | 了解 Skill 的执行入口 | [SKILL.md](SKILL.md) |
 | 绘制/整理原理图 | [排版规则](references/schematic-style.md) · [检查清单](assets/SCHEMATIC_REVIEW.md) |
 | 借鉴工程版式、处理规则冲突 | [样本方法与取舍](references/schematic-examples.md) |
