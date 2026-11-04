@@ -1,5 +1,17 @@
 # 变更记录
 
+## 2.4.1 — 2026-11-04
+
+- 显式允许按任务自动选用；新增可见使用约定，任务开始实际读取Skill/版本和适用参考后说明名称、版本及规则范围，交付时列实际检查、未验证项和证据。
+- 安装说明补充工作区/用户级指令入口与普通ChatGPT用法；无关任务不强制加载，缺少文件时说明，使用声明不作为EDA或实测通过证据。
+- 同步双语README、发布包和本机配置。保留2.4.0工程规则，未来自动选用须通过真实任务观察，配置/包校验不保证每次运行或板级结果。
+
+### English
+
+- Explicitly allow implicit selection and announce the actual skill version and applicable references after reading them; report completed checks, unverified items and evidence at delivery.
+- Document workspace/user instruction entrypoints and ordinary ChatGPT usage; avoid unrelated tasks, disclose missing files, and distinguish usage announcements from engineering results.
+- Refresh bilingual release docs, packages and local instructions without changing v2.4.0 electrical rules. Configuration checks do not prove future invocation or board correctness.
+
 ## 2.4.0 — 2026-11-04
 
 - 新增HW-01～07工程闭环：量化需求/验收、共享接口、计算与边界条件、按风险研究/仿真、装配/测试接入、样机测试及经验反馈。

@@ -59,18 +59,27 @@ python "$env:USERPROFILE/.codex/skills/embedded-hardware-design/scripts/package_
 
 另一台电脑安装相同 Release，并复制自己的项目说明、设计规则和必要工程资料；记录固定版本以便复现。仓库不会自动同步私人项目或 EDA 状态。
 
-要在某工作区持续采用此方法，将下面一行加入该工作区的`AGENTS.md`（已有同义约定就合并）：
+## 自动选用与可见提示
+
+`agents/openai.yaml`显式设置`policy.allow_implicit_invocation: true`，允许支持此配置的宿主按任务选用；这是可选用策略，不是按时运行或无条件执行的Hook。安装后在新会话确认Skill可见。实时EDA编辑仍需已连接的工具。
+
+要在某工作区持续采用此方法，将下面约定加入该工作区的`AGENTS.md`（已有同义约定就合并）：
 
 ```text
-原理图或PCB任务使用 embedded-hardware-design；新板、电气功能或接口变更先读其 references/design-workflow.md（HW-01～07），复用项目记录关联需求、依据与验收。纯排版/局部修复只复查受影响项，实测未完成时保持未验证。
+原理图、PCB、嵌入式硬件器件选型、电气/制造核验及硬件规则维护使用 embedded-hardware-design。任务开始先读取SKILL.md、provenance.json及适用参考，在首次回复说明“正在使用 embedded-hardware-design v<实际版本>；本次适用：<规则/阶段>”；交付时说明实际检查、未验证项和证据。新板、电气/接口变更执行HW-01～07，纯排版/局部修复只核验受影响项。Skill缺失或无法读取时先说明，不能只发使用声明。
 ```
 
-保留默认自动发现配置；新会话确认Skill可见，必要时显式调用`$embedded-hardware-design`。工作区约定提供持续入口，阶段证据用于核验执行，二者都不保证工具或实物结果必然通过。
+若希望Codex在多个工作区默认采用这条硬件约定，可合并到宿主支持的用户级指令文件（Codex默认位置`~/.codex/AGENTS.md`，自定义CODEX_HOME时按实际位置）；保留其他已有指令，仅作用于上述硬件任务，普通固件或其他任务按实际关联选择。其他宿主使用其支持的项目/用户指令入口。
+
+首次提示示例：“正在使用 embedded-hardware-design v2.4.1；本次适用：SCH-01～34、PCB-V07及项目规则。”示例版本和条目必须按当前安装及实际任务替换；问答不虚报板级DRC或实测。收尾示例：“本次使用v<实际版本>，已完成<检查>，<项目>待验证，证据见<路径>。”
+
+此配置和约定让使用情况可见，未来会话是否正确选用仍以首次提示、适用规则及执行证据核对；无法从一次配置检查证明所有未来任务必然遵循。必要时显式调用`$embedded-hardware-design`。规则声明不保证工具或实物检查通过。
 
 普通 ChatGPT 上传 `HARDWARE_DESIGN_RULES_CHATGPT.md`。若支持项目知识文件，可加入项目，并设置：
 
 ```text
 原理图或 PCB 任务先读取 HARDWARE_DESIGN_RULES_CHATGPT.md 和本项目规则。
+每项相关任务先说明正在依据规则文档的实际版本及适用范围工作，交付时列实际检查和待验证项。
 器件参数以准确原厂资料为准，记录实际核验证据，未执行的检查保持未验证。
 ```
 
@@ -90,3 +99,5 @@ Download the ZIP and checksum list from the same release. Extract the single `em
 For upgrades, back up and move the existing folder outside the host's scanned skill directories, then extract the replacement. Migrate intentional local changes after comparison. The former name `pcb-design-rules` should also be moved out of the scanned directory. Start a new session and verify discovery; `python scripts/package_skill.py --verify` checks installed package hashes.
 
 For ordinary ChatGPT, upload `HARDWARE_DESIGN_RULES_CHATGPT.md` with your project constraints. Live EDA control requires separate tools. Optional workflow plugins are not installed by this package. Pin a release and commit when reproducing a project; updating these rules does not revalidate an existing PCB.
+
+Implicit invocation is explicitly allowed in `agents/openai.yaml`. Add the hardware-task instruction to a supported workspace or user instruction file. At task start, read the installed entrypoint/version and relevant references, then announce the actual version and scope; at delivery, state completed checks, pending items and evidence. This is observable guidance, not a guarantee of future selection or engineering correctness.

@@ -2,3 +2,5 @@ interface:
   display_name: "嵌入式原理图与 PCB 设计"
   short_description: "关联需求验收、原理图与 PCB 设计，按风险记录计算和核验证据"
   default_prompt: "使用 $embedded-hardware-design 读取当前工程和约束；新板或电气/接口变更按 HW-01～07 关联需求、依据和验收，完成本次原理图或 PCB 任务并如实记录未测项。"
+policy:
+  allow_implicit_invocation: true

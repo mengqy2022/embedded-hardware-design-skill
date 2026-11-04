@@ -20,13 +20,13 @@
 ## 最新进展
 
 <!-- release:start -->
-**[v2.4.0](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0) · 2026-11-04**
+**[v2.4.1](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.1) · 2026-11-04**
 
-- 新增HW-01～07工程闭环：量化需求/验收、共享接口、计算与边界条件、按风险研究/仿真、装配/测试接入、样机测试及经验反馈。
-- 新增精简设计依据模板，复用已有记录并关联需求、器件/网络、计算、模型与实测证据；新板/电气/接口变更读取，纯排版和局部修复只核验受影响项。
-- 区分设计检查、制造输出、样机和合规结论；仿真记录模型边界，未测项保持未验证。延续PCB-V07及全部既有规则，更新双语首页、安装包和聊天合并规则；未修改EDA或追溯认证旧板。
+- 显式允许按任务自动选用；新增可见使用约定，任务开始实际读取Skill/版本和适用参考后说明名称、版本及规则范围，交付时列实际检查、未验证项和证据。
+- 安装说明补充工作区/用户级指令入口与普通ChatGPT用法；无关任务不强制加载，缺少文件时说明，使用声明不作为EDA或实测通过证据。
+- 同步双语README、发布包和本机配置。保留2.4.0工程规则，未来自动选用须通过真实任务观察，配置/包校验不保证每次运行或板级结果。
 
-[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0)
+[完整变更记录](CHANGELOG.md) · [安装包与校验文件](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.1)
 <!-- release:end -->
 
 ## 能解决什么
@@ -75,8 +75,10 @@ Expand-Archive -LiteralPath $skillArchive -DestinationPath "$env:USERPROFILE/.co
 
 ```text
 原理图或 PCB 任务使用 embedded-hardware-design；按任务读取 SCH/PCB 细则，
-遵循项目约束，记录适用规则版本和核验证据。
+遵循项目约束。首次回复说明正在使用的实际版本及规则范围；交付时给实际检查、待验证项和证据。
 ```
+
+Skill已显式允许按任务自动选用。跨工作区默认约定、版本提示与缺失处理见[自动选用与可见提示](docs/INSTALLATION.md#自动选用与可见提示)；普通ChatGPT使用合并规则文档及项目指令。
 
 ### 3. 以证据完成验收
 

@@ -1,5 +1,5 @@
 {
-  "version": "2.4.0",
+  "version": "2.4.1",
   "created": "2026-11-01",
   "origin": "Reviewed workspace standards, existing primary-source records, and observed user-authored layout methods",
   "scope": "Portable schematic and PCB methods with user defaults; private project circuits, screenshots and source documents are excluded",
@@ -18,7 +18,7 @@
     },
     {
       "path": "engineering/WORKFLOW.md",
-      "sha256": "b72b0407dccd1333f88ca15a20a863dba7238fdd5d91b4b57a861816241a3c48"
+      "sha256": "1e2a09c06b52a83c60e95b4825ee2c5e38690280a6f283bc2d80c3da3ff2e23f"
     },
     {
       "path": "engineering/notes/PCB_LAYOUT_RULES_RESEARCH_20261028.md",
@@ -145,5 +145,10 @@
     "rules": "HW-01–07",
     "source": "User adoption of requirements-to-measurement workflow",
     "scope": "Risk-proportionate requirements/acceptance, interface contracts, calculations, model limits, assembly/test access and prototype feedback. Documentation-only update; no EDA edits or measurements."
+  },
+  "visible_usage": {
+    "date": "2026-11-04",
+    "source": "User request for automatic hardware-task selection and visible usage",
+    "scope": "Allow implicit invocation; read installed entry/version and applicable references before announcing actual version and scope; report evidence and pending checks. Local user/workspace AGENTS pointers supplement discovery. No claim of guaranteed future invocation or hardware validation."
   }
 }

@@ -20,16 +20,18 @@ Portable rules, review templates, and evidence gates for AI-assisted embedded ha
 ## Latest release
 
 <!-- release:start -->
-**[v2.4.0](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0) · 2026-11-04**
+**[v2.4.1](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.1) · 2026-11-04**
 
-- Added HW-01–07 for measurable requirements, shared interfaces, bounded calculations, risk-based research/simulation, assembly/test access, prototype tests, and feedback.
-- Added a compact evidence template linking requirements, design objects, calculations, models, and measurements; reuse existing records and limit cosmetic/local changes to affected checks.
-- Report design, manufacturing, prototype, and compliance states separately; state model limits and keep unmeasured items unverified. Preserve PCB-V07 and existing rules, refresh bilingual release docs and portable packages; no EDA edits or retroactive board certification.
+- Explicitly allow implicit selection and announce the actual skill version and applicable references after reading them; report completed checks, unverified items and evidence at delivery.
+- Document workspace/user instruction entrypoints and ordinary ChatGPT usage; avoid unrelated tasks, disclose missing files, and distinguish usage announcements from engineering results.
+- Refresh bilingual release docs, packages and local instructions without changing v2.4.0 electrical rules. Configuration checks do not prove future invocation or board correctness.
 
-[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.0)
+[All changes](CHANGELOG.md) · [Release assets and checksums](https://github.com/mengqy2022/embedded-hardware-design-skill/releases/tag/v2.4.1)
 <!-- release:end -->
 
 ## What this provides
+
+Implicit selection is explicitly allowed. Use a supported workspace/user instruction to request hardware-task selection and an opening announcement of the actual version and applicable rules, followed by check results and pending items at delivery. See [installation and visible usage](docs/INSTALLATION.md).
 
 A reusable workflow for schematic presentation, PCB layout and routing, and delivery review. Load only the references relevant to the task and reuse the existing design and verified records.
 
